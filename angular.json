@@ -25,7 +25,22 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/lib/jquery.js",
+              "src/assets/lib/smooth-scroll.js",
+              "src/assets/lib/jquery.appear.js",
+              "src/assets/lib/wow.min.js",
+              "src/assets/lib/swiper.min.js",
+              "src/assets/lib/jquery.stellar.js",
+              "src/assets/lib/jquery.magnific-popup.min.js",
+              "src/assets/lib/imagesloaded.pkgd.min.js",
+              "src/assets/lib/counter.js",
+              "src/assets/lib/jquery.fitvids.js",
+              "src/assets/lib/main.js",
+              "src/assets/lib/skill.bars.jquery.js",
+              "src/assets/lib/revolution/js/jquery.themepunch.tools.min.js",
+              "src/assets/lib/revolution/js/jquery.themepunch.revolution.min.js"
+            ]
           },
           "configurations": {
             "production": {
