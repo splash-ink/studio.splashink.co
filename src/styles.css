@@ -1018,6 +1018,10 @@ a.text-very-light-gray-hover:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.bg-dark-blue-opacity {
+  background-color: rgba(2, 1, 8, 0.87);
+}
+
 .bg-deep-pink-opacity {
   background-color: rgba(255, 33, 79, 0.85);
 }
