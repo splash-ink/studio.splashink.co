@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OnboardComponent } from './onboard/onboard.component';
 import { BannerWidgetComponent } from './onboard/banner-widget/banner-widget.component';
+import { GalleyWidgetComponent } from './galley-widget.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OnboardComponent,
-    BannerWidgetComponent
+    BannerWidgetComponent,
+    GalleyWidgetComponent
   ],
   imports: [
     BrowserModule,
