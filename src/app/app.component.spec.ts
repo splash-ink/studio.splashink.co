@@ -1,35 +1,41 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { CoreModule } from '@core/core.module';
+import { By } from '@angular/platform-browser';
+import { NavComponent } from '@core/nav/nav.component';
+import { FooterComponent } from '@core/footer/footer.component';
 
-describe('AppComponent', () => {
+describe('⚡ Main Application', () => {
+  let fixture: ComponentFixture<AppComponent>;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        CoreModule
       ],
       declarations: [
         AppComponent
       ],
     }).compileComponents();
+
+    fixture = TestBed.createComponent(AppComponent);
   }));
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  it('🧪 should create the app', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Photos'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Photos');
+  it('🧪 should have a navbar', () => {
+    fixture.detectChanges();
+    const navEl = fixture.debugElement.queryAll(By.directive(NavComponent));
+    expect(navEl).toBeTruthy();
   });
 
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  it('🧪 should have a footer', () => {
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Photos!');
+    const footerEl = fixture.debugElement.queryAll(By.directive(FooterComponent));
+    expect(footerEl).toBeTruthy();
   });
 });
