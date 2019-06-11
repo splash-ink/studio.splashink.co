@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'ph-spl-gallery-widget',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryWidgetComponent implements OnInit {
 
+  @Input() data;
   constructor() { }
 
   ngOnInit() {
