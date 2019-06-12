@@ -9,22 +9,22 @@
 
 </style>
 
-<li class="grid-item fadeInUp gallery-item">
+<li id="{{ data.name }}" class="grid-item fadeInUp gallery-item" *ngIf="data">
   <figure>
     <div class="blog-img bg-extra-dark-gray">
-      <a [routerLink]="['/path', data.id]">
-        <img [src]="data.image" [alt]="data.name" data-no-retina="">
+      <a [routerLink]="['/path', data.name]">
+        <img [src]="data.thumbnail" [alt]="data.name" data-no-retina="">
       </a>
     </div>
     <figcaption>
       <div class="portfolio-hover-main text-left">
         <div class="blog-hover-box align-bottom">
-          <span *ngIf="data.tags | async as tag"
+          <span *ngFor="let tag of data.tags"
             class="post-author text-extra-small text-medium-gray text-uppercase d-block margin-5px-bottom sm-margin-5px-bottom">
             <a [routerLink]="['/path', tag]" class="text-medium-gray">{{ tag }}</a>
           </span>
           <h6 class="alt-font d-block text-white-2 font-weight-600 mb-0">
-            <a [routerLink]="['/path', data.id]" class="text-white-2 text-deep-pink-hover">{{ data.name }}</a>
+            <a [routerLink]="['/path', data.name]" class="text-white-2 text-deep-pink-hover">{{ data.name }}</a>
           </h6>
           <p class="text-medium-gray margin-10px-top width-80 md-width-100 blog-hover-text" style="display: none;">
             {{ data.description }}
