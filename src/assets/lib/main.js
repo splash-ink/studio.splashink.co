@@ -994,7 +994,7 @@ $(document).ready(function () {
     /*==============================================================
      portfolio filter
      ==============================================================*/
-    var $portfolio_filter = $('.portfolio-grid');
+    var $portfolio_filter = $('.blog-grid');
     $portfolio_filter.imagesLoaded(function () {
         $portfolio_filter.isotope({
             layoutMode: 'masonry',
@@ -1006,7 +1006,7 @@ $(document).ready(function () {
         });
         $portfolio_filter.isotope();
     });
-    var $grid_selectors = $('.portfolio-filter > li > a');
+    var $grid_selectors = $('.blog-filter > li > a');
     $grid_selectors.on('click', function () {
         $grid_selectors.parent().removeClass('active');
         $(this).parent().addClass('active');
