@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Galleries } from '../data';
 
 @Component({
   selector: 'ph-spl-onboard',
@@ -7,7 +6,6 @@ import { Galleries } from '../data';
 })
 export class OnboardComponent implements OnInit {
 
-  data = Galleries;
   ngOnInit() {
   }
 
