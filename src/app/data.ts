@@ -1,6 +1,36 @@
-import { GalleryModel, ImageModel } from './gallery/gallery.model';
+import { GalleryModel, ImageModel } from '@gallery/gallery.model';
+import { PartnerModel } from './onboard/partners-widget/partner.model';
 
-export const TAGS: string [] = ['web', 'advertising', 'branding', 'design', 'photography'];
+export const BACKERS: PartnerModel [] = [
+    {
+        alt: 'Envato',
+        logo_url: 'https://www.themezaa.com/html/pofo/images/logo-18.png',
+        thumbnail_url: 'https://www.themezaa.com/html/pofo/images/clients-img1.jpg',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.\
+         Lorem Ipsum has been the industry\'s standard dummy text ever since.'
+    },
+    {
+        alt: 'Magento',
+        logo_url: 'https://www.themezaa.com/html/pofo/images/logo-19.png',
+        thumbnail_url: 'https://www.themezaa.com/html/pofo/images/clients-img2.jpg',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.\
+         Lorem Ipsum has been the industry\'s standard dummy text ever since.'
+    },
+    {
+        alt: 'Google',
+        logo_url: 'https://www.themezaa.com/html/pofo/images/logo-20.png',
+        thumbnail_url: 'https://www.themezaa.com/html/pofo/images/clients-img3.jpg',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.\
+         Lorem Ipsum has been the industry\'s standard dummy text ever since.'
+    },
+    {
+        alt: 'Spotify',
+        logo_url: 'https://www.themezaa.com/html/pofo/images/logo-21.png',
+        thumbnail_url: 'https://www.themezaa.com/html/pofo/images/clients-img4.jpg',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.\
+         Lorem Ipsum has been the industry\'s standard dummy text ever since.'
+    }
+];
 
 export const GALLERIES: GalleryModel [] = [
     {
