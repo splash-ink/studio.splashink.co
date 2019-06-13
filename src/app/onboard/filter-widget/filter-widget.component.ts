@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TAGS, GALLERIES } from '../../data';
+import { GALLERIES } from '../../data';
 
 @Component({
   selector: 'ph-spl-filter-widget',
