@@ -1,10 +1,4 @@
 <style>
-  .filter-text {
-    font-weight: 600;
-    font-size: 12px;
-    text-decoration-style: none;
-  }
-
   .title-medium {
     font-size: 24px;
     line-height: 24px;
@@ -14,43 +8,7 @@
 
 <ph-spl-banner-widget></ph-spl-banner-widget>
 
-<section class="p-0 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <ul
-          class="blog-filter nav nav-tabs justify-content-center border-0 portfolio-filter-tab-1 font-weight-600 alt-font text-uppercase text-center margin-30px-tb text-small md-margin-40px-bottom sm-margin-20px-bottom">
-          <li class="nav active">
-            <a href="javascript:void(0);" style="border-bottom: none;" data-filter="*"
-              class="light-gray-text-link filter-text text-very-small">All</a>
-          </li>
-          <li class="nav"><a href="javascript:void(0);" data-filter=".web"
-              class="light-gray-text-link filter-text text-very-small">Web</a></li>
-          <li class="nav"><a href="javascript:void(0);" data-filter=".advertising"
-              class="light-gray-text-link filter-text text-very-small">Advertising</a></li>
-          <li class="nav"><a href="javascript:void(0);" data-filter=".branding"
-              class="light-gray-text-link filter-text text-very-small">Branding</a></li>
-          <li class="nav"><a href="javascript:void(0);" data-filter=".design"
-              class="light-gray-text-link filter-text text-very-small">Design</a></li>
-          <li class="nav"><a href="javascript:void(0);" data-filter=".photography"
-              class="light-gray-text-link filter-text text-very-small">Photography</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row blog-post-style4">
-      <div class="col-12 px-3 p-md-0">
-        <div class="filter-content overflow-hidden">
-          <ul class="blog-grid blog-4col gutter-small" style="position: relative; height: 1176.14px;">
-            <li class="grid-sizer"></li>
-            <ph-spl-gallery-widget *ngFor="let gallery of data" [data]="gallery"></ph-spl-gallery-widget>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<ph-spl-filter-widget></ph-spl-filter-widget>
 
 <section class="wow fadeIn no-padding-bottom no-padding-top" style="visibility: visible; animation-name: fadeIn;">
   <div class="container">
@@ -143,7 +101,7 @@
   </div>
 </section>
 
-<section class="wow fadeIn margin-15px-tb" style="visibility: visible; animation-name: fadeIn; padding: 0px;">
+<section class="wow fadeIn margin-20px-tb" style="visibility: visible; animation-name: fadeIn; padding: 0px;">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-8 col-md-10 text-center">
