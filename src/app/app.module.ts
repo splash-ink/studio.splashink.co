@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { OnboardComponent } from './onboard/onboard.component';
 import { BannerWidgetComponent } from './onboard/banner-widget/banner-widget.component';
 import { GalleryWidgetComponent } from './onboard/gallery-widget/gallery-widget.component';
+import { FilterWidgetComponent } from './onboard/filter-widget/filter-widget.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OnboardComponent,
     BannerWidgetComponent,
-    GalleryWidgetComponent
+    GalleryWidgetComponent,
+    FilterWidgetComponent
   ],
   imports: [
     BrowserModule,
