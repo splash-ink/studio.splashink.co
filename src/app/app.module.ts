@@ -8,6 +8,7 @@ import { OnboardComponent } from './onboard/onboard.component';
 import { BannerWidgetComponent } from './onboard/banner-widget/banner-widget.component';
 import { GalleryWidgetComponent } from './onboard/gallery-widget/gallery-widget.component';
 import { FilterWidgetComponent } from './onboard/filter-widget/filter-widget.component';
+import { PartnerWidgetComponent } from './onboard/partners-widget/partner-widget.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FilterWidgetComponent } from './onboard/filter-widget/filter-widget.com
     OnboardComponent,
     BannerWidgetComponent,
     GalleryWidgetComponent,
-    FilterWidgetComponent
+    FilterWidgetComponent,
+    PartnerWidgetComponent
   ],
   imports: [
     BrowserModule,
