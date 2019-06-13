@@ -1,3 +1,51 @@
-<p>
-  filter-widget works!
-</p>
+<section class="p-0 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <ul
+          class="blog-filter nav nav-tabs justify-content-center border-0 portfolio-filter-tab-1 font-weight-600 alt-font text-uppercase text-center margin-30px-tb text-small md-margin-40px-bottom sm-margin-20px-bottom">
+          <li class="nav active filter-text">
+            <a href="javascript:void(0);" data-filter="*"
+             class="light-gray-text-link text-very-small filter-text">Todos</a>
+          </li>
+          <li class="nav">
+            <a href="javascript:void(0);" data-filter=".design"
+             class="light-gray-text-link text-very-small filter-text">Design</a>
+          </li>
+          <li class="nav">
+            <a href="javascript:void(0);" data-filter=".fotografia"
+              class="light-gray-text-link text-very-small filter-text">Fotografia</a>
+          </li>
+          <li class="nav">
+            <a href="javascript:void(0);" data-filter=".produto"
+              class="light-gray-text-link text-very-small filter-text">Produto</a>
+          </li>
+          <li class="nav">
+            <a href="javascript:void(0);" data-filter=".marca"
+             class="light-gray-text-link text-very-small filter-text">Marca</a>
+          </li>
+          <li class="nav">
+            <a href="javascript:void(0);" data-filter=".ilustracao"
+              class="light-gray-text-link text-very-small filter-text">Ilustração</a>
+          </li>
+          <li class="nav">
+            <a href="javascript:void(0);" data-filter=".manipulacao"
+              class="light-gray-text-link text-very-small filter-text">Manipulação de Imagem</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row blog-post-style4">
+      <div class="col-12 px-3 p-md-0">
+        <div class="filter-content overflow-hidden">
+          <ul class="blog-grid blog-4col gutter-small" style="position: relative; height: 1176.14px;">
+            <li class="grid-sizer"></li>
+            <ph-spl-gallery-widget *ngFor="let gallery of galleries" [data]="gallery"></ph-spl-gallery-widget>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
