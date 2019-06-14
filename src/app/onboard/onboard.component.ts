@@ -1,5 +1,3 @@
-import { PartnerModel } from './partners-widget/partner.model';
-import { BACKERS } from './../data';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OnboardComponent implements OnInit {
 
-  backers: PartnerModel [] = BACKERS;
   constructor() {}
 
   ngOnInit() {
