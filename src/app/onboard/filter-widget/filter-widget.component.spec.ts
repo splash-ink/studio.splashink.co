@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { FilterWidgetComponent } from './filter-widget.component';
+import { GalleryWidgetComponent } from '../gallery-widget/gallery-widget.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('FilterWidgetComponent', () => {
   let component: FilterWidgetComponent;
@@ -8,7 +11,9 @@ describe('FilterWidgetComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FilterWidgetComponent ]
+      declarations: [ FilterWidgetComponent, GalleryWidgetComponent ],
+      imports: [RouterTestingModule],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   }));
