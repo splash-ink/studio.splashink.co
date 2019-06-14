@@ -1,0 +1,18 @@
+<div class="container-fluid padding-five-lr">
+  <div class="row">
+    <div *ngFor="let backer of docs$" class="col-12 col-xl-3 col-md-6 banner-style1 lg-margin-30px-bottom wow fadeInUp" data-wow-delay="0.1s"
+      style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+      <figure class="bg-extra-dark-gray">
+        <div [id]="backer.alt" class="banner-image height-250px cover-background">
+        </div>
+        <figcaption>
+          <div
+            class="d-flex flex-column justify-content-center align-items-center text-center h-100 lg-margin-30px-bottom">
+            <div><img [src]="backer.logo_url" [alt]="backer.alt" data-no-retina=""></div>
+            <p class="width-80 mx-auto margin-20px-top text-medium-gray sm-width-100">{{ backer.description }}</p>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
