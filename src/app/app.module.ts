@@ -9,6 +9,7 @@ import { BannerWidgetComponent } from './onboard/banner-widget/banner-widget.com
 import { GalleryWidgetComponent } from './onboard/gallery-widget/gallery-widget.component';
 import { FilterWidgetComponent } from './onboard/filter-widget/filter-widget.component';
 import { PartnerWidgetComponent } from './onboard/partner-widget/partner-widget.component';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PartnerWidgetComponent } from './onboard/partner-widget/partner-widget.
   ],
   imports: [
     BrowserModule,
+    SharedModule,
     AppRoutingModule,
     CoreModule
   ],
