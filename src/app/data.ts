@@ -1,5 +1,5 @@
 import { GalleryModel, ImageModel } from '@gallery/gallery.model';
-import { PartnerModel } from './onboard/partners-widget/partner.model';
+import { PartnerModel } from './onboard/partner-widget/partner.model';
 
 export const BACKERS: PartnerModel [] = [
     {
