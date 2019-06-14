@@ -1,25 +1,27 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { GalleryWidgetComponent } from './gallery-widget.component';
 
-describe('GalleryWidgetComponent', () => {
+describe('⚡ Gallery Widget', () => {
   let component: GalleryWidgetComponent;
   let fixture: ComponentFixture<GalleryWidgetComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GalleryWidgetComponent ]
+      declarations: [ GalleryWidgetComponent ],
+      imports: [RouterTestingModule],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
+
+    fixture = TestBed.createComponent(GalleryWidgetComponent);
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(GalleryWidgetComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
 
-  it('should create', () => {
+  it('🧪 should create the widget', async () => {
+    component = fixture.componentInstance;
     expect(component).toBeTruthy();
   });
 });
