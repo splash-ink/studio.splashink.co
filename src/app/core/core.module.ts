@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { NavComponent } from './nav/nav.component';
 import { throwIfAlreadyLoaded } from './module-import-guard';
 import { FooterComponent } from './footer/footer.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [NavComponent, FooterComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [NavComponent, FooterComponent]
 })
