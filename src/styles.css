@@ -213,16 +213,6 @@ dl {
   opacity: 1;
 }
 
-img[alt="www.000webhost.com"] {
-  display: none;
-
-}
-
-img[alt="000webhost logo"] {
-  display: none;
-
-}
-
 /* ===================================
     Typography
 ====================================== */
@@ -17501,9 +17491,9 @@ aside .latest-post li figure {
     width: 80px;
   }
 
-  header a.logo {
-    width: 79px;
-    height: auto;
+  .logo {
+    max-width: 79px;
+    max-height: auto;
   }
 
   body {
