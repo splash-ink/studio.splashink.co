@@ -9541,7 +9541,7 @@ header nav.navbar .navbar-nav>li>a:hover,
 nav.navbar.bootsnav ul.nav>li>a:hover,
 .header-search-form:hover,
 .header-social-icon a:hover {
-  color: rgba(0, 0, 0, 0.6)
+  color: rgba(77, 75, 75, 0.6)
 }
 
 header nav.navbar.white-link .navbar-nav>li>a:hover,
@@ -9621,7 +9621,7 @@ header.header-appear nav.bootsnav.header-light-transparent .navbar-nav>li>a.acti
 header.header-appear nav.bootsnav.header-light .navbar-nav>li>a.active,
 header nav.navbar .navbar-nav>li>a.active,
 nav.navbar.bootsnav ul.nav>li>a.active {
-  color: rgba(0, 0, 0, 0.6)
+  text-decoration: line-through;
 }
 
 header nav.navbar.white-link .navbar-nav>li>a.active,
