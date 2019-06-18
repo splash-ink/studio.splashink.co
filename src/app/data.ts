@@ -1,5 +1,60 @@
 import { GalleryModel, ImageModel } from '@gallery/gallery.model';
+import { PriceModel } from '@pricing/price.model';
 import { PartnerModel } from './onboard/partner-widget/partner.model';
+
+export const PICTURES: ImageModel [] = [
+    {
+        alt: 'cat drinking water',
+        downloadUrl: 'https://images.unsplash.com/photo-1558860360-02e231e9d947?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80'
+    }
+];
+
+export const PRICINGS: PriceModel [] = [
+    {
+        highlighted: false,
+        name: 'Clássico',
+        price: 50,
+        coin: null,
+        benefits: [
+            '30% off discount astrwo',
+            'Lorem ipsun shetug kunai dolet imir'
+        ],
+        coupon: null
+    },
+    {
+        highlighted: false,
+        name: 'Profissional',
+        price: 50,
+        coin: null,
+        benefits: [
+            '30% off discount astrwo',
+            'Lorem ipsun shetug kunai dolet imir'
+        ],
+        coupon: null
+    },
+    {
+        highlighted: true,
+        name: 'Premium',
+        price: 50,
+        coin: null,
+        benefits: [
+            '30% off discount astrwo',
+            'Lorem ipsun shetug kunai dolet imir'
+        ],
+        coupon: null
+    },
+    {
+        highlighted: false,
+        name: 'Golden Boy ⭐',
+        price: 50,
+        coin: null,
+        benefits: [
+            '30% off discount astrwo',
+            'Lorem ipsun shetug kunai dolet imir'
+        ],
+        coupon: null
+    }
+];
 
 export const BACKERS: PartnerModel [] = [
     {
