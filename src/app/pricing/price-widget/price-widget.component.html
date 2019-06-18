@@ -1,0 +1,15 @@
+<div class="pricing-box bg-white">
+  <div class="padding-10px-tb alt-font text-white-2 font-weight-600 text-uppercase" [ngClass]="{'bg-golden text-white': doc.highlighted, 'bg-extra-dark-gray': !doc.highlighted}" >{{ doc.name }}</div>
+  <div class="bg-light-gray padding-35px-all">
+    <h4 class="text-extra-dark-gray font-weight-500 mb-0">{{ doc.price | currency:'AOA':'KZ' }}</h4>
+    <div class="text-extra-small text-uppercase margin-5px-top">Por Fotografia</div>
+  </div>
+  <div class="padding-30px-all pricing-features md-padding-20px-all sm-padding-30px-all">
+    <ul class="list-style-11" *ngIf="doc.benefits">
+      <li *ngFor="let benefit of doc.benefits">{{ benefit }}</li>
+    </ul>
+    <div class="pricing-action margin-35px-top md-no-margin-top">
+      <a href="javascript:void(0);" [ngClass]="{'btn-golden': doc.highlighted, 'btn-transparent-dark-gray': !doc.highlighted}" class="btn btn-very-small text-extra-small">Escolher Plano</a>
+    </div>
+  </div>
+</div>
