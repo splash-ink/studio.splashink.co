@@ -7,6 +7,10 @@ const routes: Routes = [
     path: 'blog',
     loadChildren: () => import('@blog/blog.module').then(m => m.BlogModule)
   },
+  {
+    path: 'pricing',
+    loadChildren: () => import('@pricing/pricing.module').then(m => m.PricingModule)
+  },
   { path: '', component: OnboardComponent }
 ];
 
