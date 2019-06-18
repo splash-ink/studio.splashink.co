@@ -1,14 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ph-spl-onboard',
   templateUrl: './onboard.component.html',
 })
-export class OnboardComponent implements OnInit {
+export class OnboardComponent {
 
   constructor() {}
-
-  ngOnInit() {
-  }
 
 }
