@@ -6,6 +6,7 @@
       "@blog/*": ["app/blog/*"],
       "@core/*": ["app/core/*"],
       "@gallery/*": ["app/gallery/*"],
+      "@pricing/*": ["app/pricing/*"],
       "@shared/*": ["app/shared/*"]
     },
     "outDir": "./dist/out-tsc",
