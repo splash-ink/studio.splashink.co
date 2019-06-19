@@ -1,0 +1,51 @@
+<section class="wow fadeIn" style="visibility: visible; animation-name: fadeIn; padding: 100px 0;">
+  <div class="container">
+    <div class="row pricing-box-style1">
+      <div *ngFor="let doc of docs" [ngClass]="{'highlight': doc.highlighted}"
+        class="col-12 col-lg-3 col-md-6  text-center md-margin-30px-bottom wow fadeInUp"
+        style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+        <ph-spl-price-widget [data]="doc"></ph-spl-price-widget>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-extra-dark-gray border-0 p-0 wow fadeIn margin-35px-tb" style="visibility: visible; animation-name: fadeIn; padding: 0;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-6 d-flex align-items-center wow fadeIn"
+        style="visibility: visible; animation-name: fadeIn;">
+        <div
+          class="w-100 padding-thirteen-all lg-padding-ten-all md-padding-six-all sm-padding-50px-tb sm-no-padding-lr">
+          <div class="panel-group accordion-style1" id="accordion-design">
+            <ph-spl-accordion-widget *ngFor="let question of qna" [data]="question"></ph-spl-accordion-widget>            
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 cover-background md-height-500px sm-height-350px wow fadeIn"
+        style="background: url(&quot;assets/images/alexandru-acea-1160461-unsplash.jpg&quot;); visibility: visible; animation-name: fadeIn;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wow fadeIn margin-35px-tb" style="visibility: visible; animation-name: fadeIn; padding: 0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-4 text-left md-margin-30px-bottom">
+        <img src="assets/images/davids-kokainis-1165647-unsplash.jpg" alt="Casamentos">
+      </div>
+      <div class="col-12 col-lg-4 text-left md-margin-30px-bottom">
+        <img src="assets/images/matty-adame-274356-unsplash.jpg" alt="Festas">
+      </div>
+      <div class="col-12 col-lg-4 text-center">
+        <div
+          class="d-flex flex-column justify-content-center position-relative padding-45px-all md-padding-30px-all h-100 bg-light-gray">
+          <span class="text-extra-dark-gray alt-font margin-10px-bottom d-inline-block text-medium">Eventos Especiais</span>
+          <p class="width-100">Todos os preços de eventos, além de casamentos e produtos, são feitos por orçamento de acordo a localidade e o espaço a ser usado.</p>
+          <a href="javascript:void(0);" class="btn btn-rounded bt-transparent-dark-gray btn-dark-gray btn-very-small text-extra-small">Solicitar Orçamento</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
