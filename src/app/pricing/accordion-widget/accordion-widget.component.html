@@ -1,0 +1,11 @@
+<div class="panel" *ngIf="doc">
+  <div class="panel-heading">
+    <a data-toggle="collapse" (click)="togglePanel()" href="javascript:void(0);" class="collapsed">
+      <div class="panel-title font-weight-500 text-white-2 text-uppercase">{{ doc.question }}<span
+          class="float-right"><i [id]="'icon-btn-' + doc.key"></i></span></div>
+    </a>
+  </div>
+  <div [id]="doc.key" class="panel-collapse collapse" [ngClass]="{'in show': doc.state}">
+    <div class="panel-body">{{ doc.asks }}</div>
+  </div>
+</div>
