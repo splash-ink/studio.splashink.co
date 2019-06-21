@@ -23,7 +23,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/magnific-popup/dist/magnific-popup.css"
             ],
             "scripts": [
               "src/assets/lib/jquery.js",
@@ -41,8 +42,10 @@
               "src/assets/lib/equalize.min.js",
               "src/assets/lib/skill.bars.jquery.js",
               "src/assets/lib/isotope.pkgd.min.js",
+              "src/assets/lib/justified-gallery.min.js",
               "src/assets/lib/revolution/js/jquery.themepunch.tools.min.js",
-              "src/assets/lib/revolution/js/jquery.themepunch.revolution.min.js"
+              "src/assets/lib/revolution/js/jquery.themepunch.revolution.min.js",
+              "node_modules/magnific-popup/dist/jquery.magnific-popup.min.js"
             ]
           },
           "configurations": {
