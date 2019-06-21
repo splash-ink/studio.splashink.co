@@ -20,6 +20,8 @@
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
     "core-js": "^2.5.4",
+    "jquery": "^3.4.1",
+    "magnific-popup": "^1.1.0",
     "marked": "^0.6.2",
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
