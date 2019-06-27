@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "disparos-digital-studio": {
+      "hosting": {
+        "Photography": [
+          "disparos-digital-studio"
+        ]
+      }
+    }
+  }
+}
