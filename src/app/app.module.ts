@@ -10,6 +10,9 @@ import { GalleryWidgetComponent } from './onboard/gallery-widget/gallery-widget.
 import { FilterWidgetComponent } from './onboard/filter-widget/filter-widget.component';
 import { PartnerWidgetComponent } from './onboard/partner-widget/partner-widget.component';
 import { SharedModule } from '@shared/shared.module';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '@environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,8 @@ import { SharedModule } from '@shared/shared.module';
     BrowserModule,
     SharedModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule.enablePersistence(),
     CoreModule
   ],
   providers: [],
