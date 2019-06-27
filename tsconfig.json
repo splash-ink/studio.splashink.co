@@ -5,6 +5,7 @@
     "paths": {
       "@blog/*": ["app/blog/*"],
       "@core/*": ["app/core/*"],
+      "@environments/*": ["environments/*"],
       "@gallery/*": ["app/gallery/*"],
       "@pricing/*": ["app/pricing/*"],
       "@shared/*": ["app/shared/*"]
