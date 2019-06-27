@@ -1,5 +1,7 @@
+import { GalleryModel } from '@gallery/gallery.model';
 import { Component, OnInit } from '@angular/core';
-import { GALLERIES } from '../../data';
+import { Observable } from 'rxjs';
+import { FirestoreDataService } from '@core/firestore-data.service';
 
 @Component({
   selector: 'ph-spl-filter-widget',
@@ -16,10 +18,11 @@ import { GALLERIES } from '../../data';
 })
 export class FilterWidgetComponent implements OnInit {
 
-  galleries = GALLERIES;
-  constructor() { }
+  docs$: Observable<GalleryModel[]>;
+  constructor(private fds: FirestoreDataService) { }
 
   ngOnInit() {
+    this.docs$ = this.fds.col$('galleries');
   }
 
 }
