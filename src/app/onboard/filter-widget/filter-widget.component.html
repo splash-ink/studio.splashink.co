@@ -6,11 +6,11 @@
           class="blog-filter nav nav-tabs justify-content-center border-0 portfolio-filter-tab-1 font-weight-600 alt-font text-uppercase text-center margin-30px-tb text-small md-margin-40px-bottom sm-margin-20px-bottom">
           <li class="nav active filter-text">
             <a href="javascript:void(0);" data-filter="*"
-             class="light-gray-text-link text-very-small filter-text">Todos</a>
+              class="light-gray-text-link text-very-small filter-text">Todos</a>
           </li>
           <li class="nav">
             <a href="javascript:void(0);" data-filter=".design"
-             class="light-gray-text-link text-very-small filter-text">Design</a>
+              class="light-gray-text-link text-very-small filter-text">Design</a>
           </li>
           <li class="nav">
             <a href="javascript:void(0);" data-filter=".fotografia"
@@ -22,7 +22,7 @@
           </li>
           <li class="nav">
             <a href="javascript:void(0);" data-filter=".marca"
-             class="light-gray-text-link text-very-small filter-text">Marca</a>
+              class="light-gray-text-link text-very-small filter-text">Marca</a>
           </li>
           <li class="nav">
             <a href="javascript:void(0);" data-filter=".ilustracao"
@@ -40,9 +40,9 @@
     <div class="row blog-post-style4">
       <div class="col-12 px-3 p-md-0">
         <div class="filter-content overflow-hidden">
-          <ul class="blog-grid blog-4col gutter-small" style="position: relative; min-height: 450px;" *ngFor="let doc of docs$ | async">
+          <ul class="blog-grid blog-4col gutter-small" style="position: relative; min-height: 450px;">
             <li class="grid-sizer"></li>
-            <ph-spl-gallery-widget [data]="doc"></ph-spl-gallery-widget>
+            <ph-spl-gallery-widget *ngFor="let doc of docs$ | async" [data]="doc"></ph-spl-gallery-widget>
           </ul>
         </div>
       </div>
