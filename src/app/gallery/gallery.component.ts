@@ -15,7 +15,9 @@ export class GalleryComponent implements AfterViewInit {
   ngAfterViewInit() {
     $('.image-link').magnificPopup({
       type: 'image',
-      mainClass: 'mfp-fade',
+      mainClass: 'mfp-with-zoom mfp-img-mobile',
+        fixedContentPos: true,
+        closeBtnInside: false,
       image: {
         titleSrc: 'title',
         verticalFit: true,
@@ -23,6 +25,13 @@ export class GalleryComponent implements AfterViewInit {
       },
       gallery: {
         enabled: true,
+      },
+      zoom: {
+        enabled: true,
+        duration: 300, // don't foget to change the duration also in CSS
+        opener: function (element) {
+            return element.find('img');
+        }
       }
     });
   }
