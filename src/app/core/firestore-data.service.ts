@@ -58,6 +58,11 @@ export class FirestoreDataService {
       );
   }
 
+  colWithIds$<T>(ref: CollectionPredicate<T>, queryFn?): Observable<T[]> {
+    return this.col(ref, queryFn)
+    .valueChanges({ idField: 'id' });
+  }
+
   /// **************
   /// Write Data
   /// **************
