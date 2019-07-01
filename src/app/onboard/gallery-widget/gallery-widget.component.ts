@@ -1,6 +1,7 @@
 import { Component, Input, Inject, AfterViewInit } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { GalleryModel } from '@gallery/gallery.model';
+import { HttpClient } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'ph-spl-gallery-widget',
@@ -14,7 +15,7 @@ export class GalleryWidgetComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.data.tags.forEach(tag => {
-      this.document.getElementById(`${this.data.name}`).classList.add(tag);
+      this.document.getElementById(`${this.data.id}`).classList.add(tag);
     });
   }
 
