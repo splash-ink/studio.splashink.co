@@ -22,7 +22,7 @@ export class FilterWidgetComponent implements OnInit {
   constructor(private fds: FirestoreDataService) { }
 
   ngOnInit() {
-    this.docs$ = this.fds.col$('galleries');
+    this.docs$ = this.fds.colWithIds$('galleries');
   }
 
 }
