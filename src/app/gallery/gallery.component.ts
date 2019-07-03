@@ -1,6 +1,8 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import * as $ from 'jquery';
 import 'magnific-popup';
+import { ActivatedRoute } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 
 @Component({
@@ -8,9 +10,16 @@ import 'magnific-popup';
   templateUrl: './gallery.component.html',
   styles: []
 })
-export class GalleryComponent implements AfterViewInit {
+export class GalleryComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  id;
+  constructor(private route: ActivatedRoute) { }
+
+  ngOnInit() {
+    this.route.paramMap.pipe(
+      switchMap(params => this.id = params.get('id'))
+    );
+  }
 
   ngAfterViewInit() {
     $('.image-link').magnificPopup({
