@@ -1,22 +1,16 @@
-import { Component, Input, Inject, AfterViewInit } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
 import { GalleryModel } from '@gallery/gallery.model';
-import { HttpClient } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'ph-spl-gallery-widget',
   templateUrl: './gallery-widget.component.html',
   styles: []
 })
-export class GalleryWidgetComponent implements AfterViewInit {
+export class GalleryWidgetComponent implements OnInit {
 
   @Input() data: GalleryModel;
-  constructor(@Inject(DOCUMENT) private document: Document) { }
+  constructor() { }
 
-  ngAfterViewInit() {
-    this.data.tags.forEach(tag => {
-      this.document.getElementById(`${this.data.id}`).classList.add(tag);
-    });
-  }
+  ngOnInit() {}
 
 }
