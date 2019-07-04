@@ -90,28 +90,56 @@ export const BACKERS: PartnerModel [] = [
 
 export const GALLERIES: GalleryModel [] = [
     {
+        id: 'some1',
         name: 'Get to know the world',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         thumbnail: 'https://www.themezaa.com/html/pofo/images/blog-page-03-img5.jpg',
-        tags: ['marca', 'design']
+        tags: ['marca', 'design'],
+        photos: [
+            {
+                alt: 'coyote de @alexandrina',
+                downloadUrl: 'https://firebasestorage.googleapis.com/v0/b/dispar…=media&token=de493ffd-99d9-4383-ab15-298aaecf7bd7'
+            }
+        ]
     },
     {
+        id: 'some2',
         name: 'The most beautiful sky',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         thumbnail: 'https://www.themezaa.com/html/pofo/images/blog-page-03-img6.jpg',
-        tags: ['ilustracao']
+        tags: ['ilustracao'],
+        photos: [
+            {
+                alt: 'coyote de @alexandrina',
+                downloadUrl: 'https://firebasestorage.googleapis.com/v0/b/dispar…=media&token=de493ffd-99d9-4383-ab15-298aaecf7bd7'
+            }
+        ]
     },
     {
+        id: 'some3',
         name: 'I can\'t change the rule',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         thumbnail: 'https://www.themezaa.com/html/pofo/images/blog-page-03-img7.jpg',
-        tags: ['design', 'produto']
+        tags: ['design', 'produto'],
+        photos: [
+            {
+                alt: 'coyote de @alexandrina',
+                downloadUrl: 'https://firebasestorage.googleapis.com/v0/b/dispar…=media&token=de493ffd-99d9-4383-ab15-298aaecf7bd7'
+            }
+        ]
     },
     {
+        id: 'some4',
         name: 'Happiness is something',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         thumbnail: 'https://www.themezaa.com/html/pofo/images/blog-page-03-img8.jpg',
-        tags: ['fotografia']
+        tags: ['fotografia'],
+        photos: [
+            {
+                alt: 'coyote de @alexandrina',
+                downloadUrl: 'https://firebasestorage.googleapis.com/v0/b/dispar…=media&token=de493ffd-99d9-4383-ab15-298aaecf7bd7'
+            }
+        ]
     }
 ];
 
