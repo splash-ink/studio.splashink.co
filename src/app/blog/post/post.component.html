@@ -5,8 +5,8 @@
       <div class="col-md-12 col-sm-12 col-xs-12 extra-small-screen display-table page-title-large">
         <div class="display-table-cell vertical-align-middle text-center">
           <span
-            class="opacity6 alt-font text-extra-light-gray font-weight-600 txt-to-upper-case">{{ doc$.updatedAt.toDate() | date }}</span>
-          | <span class="font-weight-600 txt-to-upper-case" *ngFor="let t of doc$.tags"> {{ t }} </span>
+            class="opacity6 alt-font text-extra-light-gray font-weight-600 txt-to-upper-case">{{ doc$?.updatedAt.toDate() | date }}</span>
+          | <span class="font-weight-600 txt-to-upper-case" *ngFor="let t of doc$?.tags"> {{ t }} </span>
           <h1 class="alt-font text-white font-weight-600 letter-spacing-minus-1">Nós combinamos design, pensamento e
             técnica.</h1>
         </div>
