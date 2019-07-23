@@ -17,15 +17,11 @@ export class AccordionWidgetComponent implements AfterViewInit {
     const el = this.document.getElementById(`${this.doc.key}`);
     const i = this.document.getElementById(`icon-btn-${this.doc.key}`);
 
-    if ((el.classList.contains('in') && el.classList.contains('show') && i.classList.contains('ti-minus'))) {
-      el.classList.remove('in', 'show');
-      i.classList.remove('ti-minus');
-      i.classList.add('ti-plus');
-    } else {
-      el.classList.add('in', 'show');
-      i.classList.add('ti-minus');
-      i.classList.remove('ti-plus');
-    }
+    el.classList.toggle('in');
+    el.classList.toggle('show');
+
+    i.classList.toggle('ti-minus');
+    i.classList.toggle('ti-plus');
 
   }
 
