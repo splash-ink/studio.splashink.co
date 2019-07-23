@@ -13,10 +13,18 @@ app.use(cors({ origin: true }));
 
 //#region CALLS
 
-    app.get('/galleries', async (request, response) => {
-        const data = await db.collection('galleries').get();
-        return response.send(data.docs);
-    })
+    app.get('/galleries', (request, response) => {
+        const payload: Array<any> = [];
+
+        return db.collection('galleries')
+        .get()
+        .then((snapshoot) => {
+            snapshoot.docs.forEach(doc => {
+                payload.push(doc.data());
+            });
+            response.send({ payload });
+        });
+    });
 
 //#endregion
 
