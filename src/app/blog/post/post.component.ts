@@ -3,6 +3,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FirestoreDataService } from '@core/firestore-data.service';
 import { Subscription } from 'rxjs';
 import { PostModel } from './post.model';
+import { SeoService } from '@core/seo.service';
 
 @Component({
   selector: 'ph-spl-post',
@@ -25,7 +26,9 @@ export class PostComponent implements OnInit, OnDestroy {
   helper: Subscription;
   /// alias for async fields
   startWith = '';
-  constructor(private fds: FirestoreDataService, private sanitizer: DomSanitizer) { }
+  constructor(private fds: FirestoreDataService,
+     private sanitizer: DomSanitizer,
+     private seo: SeoService) { }
 
   syncBg() {
     return this.sanitizer.bypassSecurityTrustStyle(`
@@ -38,6 +41,13 @@ export class PostComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.helper = this.fds.doc$<PostModel>('blog/LYE0cQ2QPfMz3svXiGfW')
     .subscribe(payload => {
+      this.seo.generateTags({
+        title: `Blog :: ${payload.title}`,
+        description: 'Leia o artigo completo clicando na ligação.',
+        image: payload.thumbnail,
+        slug: `blog/${payload.pid}`
+      });
+
       this.doc$ = payload;
 
       this.startWith = this.doc$.body.charAt(0);
