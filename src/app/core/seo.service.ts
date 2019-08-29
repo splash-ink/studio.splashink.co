@@ -1,12 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
+import { isEmpty } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SeoService {
 
-  constructor(private meta: Meta, private title: Title) { }
+  constructor(private meta: Meta,
+     private title: Title,
+      @Inject(DOCUMENT) private document: Document) { }
 
   generateTags(config) {
     config = {
@@ -32,5 +36,16 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:image', content: config.image });
     this.meta.updateTag({ property: 'og:url', content: `https://studio.splashink.co/${config.slug}` });
 
+  }
+
+  updateCanonicalTag(slug) {
+    if (typeof slug !== 'string' || slug === undefined) {
+      return;
+    }
+
+    this.document
+
+    .querySelector('#canonical')
+    .setAttribute('href', `https://www.studio.splashink.co/${slug}`);
   }
 }
