@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PriceModel } from './price.model';
 import { PRICINGS, QnA } from 'app/data';
 import { AccordionModel } from './accordion-widget/accordion.model';
+import { SeoService } from '@core/seo.service';
 
 @Component({
   templateUrl: './pricing.component.html',
@@ -11,9 +12,18 @@ export class PricingComponent implements OnInit {
 
   docs: PriceModel [];
   qna: AccordionModel [];
-  constructor() { }
+  constructor(private seo: SeoService) { }
 
   ngOnInit() {
+    this.seo.generateTags({
+      title: 'Preçários - Q&A',
+      description: 'Ajustamos tudo para que minimize seus custos com preços bem definidos e aproveite dos nossos serviços.',
+      image: 'https://domain-to-picture.com',
+      slug: 'pricing'
+    });
+
+    this.seo.updateCanonicalTag('https://studio.splashink.co/pricing');
+
     this.docs = PRICINGS;
     this.qna = QnA;
   }
