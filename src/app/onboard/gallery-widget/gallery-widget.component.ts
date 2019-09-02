@@ -8,12 +8,6 @@ import { GalleryModel } from '@gallery/gallery.model';
     .gallery-item {
       visibility: visible;
       animation-name: fadeInUp;
-      /* position: absolute; */
-      /* left: 0%; */
-      /* top: 0px; */
-    }
-
-    .gallery-item {
       display: inline-block;
     }
   `]
