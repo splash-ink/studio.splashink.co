@@ -4,7 +4,13 @@ import { GalleryModel } from '@gallery/gallery.model';
 @Component({
   selector: 'ph-spl-gallery-widget',
   templateUrl: './gallery-widget.component.html',
-  styles: []
+  styles: [`
+    .gallery-item {
+      visibility: visible;
+      animation-name: fadeInUp;
+      display: inline-block;
+    }
+  `]
 })
 export class GalleryWidgetComponent implements OnInit {
 
