@@ -1,32 +1,23 @@
 import * as functions from 'firebase-functions';
-import * as cors from 'cors';
-import * as express from 'express';
-import * as admin from 'firebase-admin';
+import { NestFactory } from '@nestjs/core';
+import { ExpressAdapter } from '@nestjs/platform-express';
+import express from 'express';
+import { AppModule } from './app/app.module';
 
-/// get elements & init app
-admin.initializeApp();
-const db = admin.firestore();
+const server = express();
 
-/// setup express application
-const app = express();
-app.use(cors({ origin: true }));
+const createNestServer = async (expressInstance) => {
+  const app = await NestFactory.create(
+    AppModule,
+    new ExpressAdapter(expressInstance),
+  );
 
-//#region CALLS
+  return app.init();
+};
 
-    app.get('/galleries', (request, response) => {
-        const payload: Array<any> = [];
 
-        return db.collection('galleries')
-        .get()
-        .then((snapshoot) => {
-            snapshoot.docs.forEach(doc => {
-                payload.push(doc.data());
-            });
-            response.send({ payload });
-        });
-    });
+createNestServer(server)
+    .then(v => console.log('😻 Nest Ready'))
+    .catch(err => console.error('💔 Nest broken', err));
 
-//#endregion
-
-/// assigning express config to 🔥 Cloud Functions
-export const api = functions.https.onRequest(app);
+export const api = functions.https.onRequest(server);
