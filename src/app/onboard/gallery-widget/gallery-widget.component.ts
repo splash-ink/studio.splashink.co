@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { GalleryModel } from '@gallery/gallery.model';
 
 @Component({
-  selector: 'ph-spl-gallery-widget',
+  selector: 'ds-gallery-widget',
   templateUrl: './gallery-widget.component.html',
   styles: [`
     .gallery-item {

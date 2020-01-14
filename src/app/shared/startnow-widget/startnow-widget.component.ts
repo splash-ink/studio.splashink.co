@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ph-spl-startnow-widget',
+  selector: 'ds-startnow-widget',
   templateUrl: './startnow-widget.component.html',
   styles: []
 })

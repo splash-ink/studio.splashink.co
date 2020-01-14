@@ -6,7 +6,7 @@ import { switchMap } from 'rxjs/operators';
 
 
 @Component({
-  selector: 'ph-spl-gallery',
+  selector: 'ds-gallery',
   templateUrl: './gallery.component.html',
   styles: []
 })

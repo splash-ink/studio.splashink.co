@@ -2,7 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: 'ph-spl-root',
+  selector: 'ds-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

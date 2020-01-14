@@ -3,7 +3,7 @@ import { DOCUMENT } from '@angular/common';
 import { AccordionModel } from './accordion.model';
 
 @Component({
-  selector: 'ph-spl-accordion-widget',
+  selector: 'ds-accordion-widget',
   templateUrl: './accordion-widget.component.html',
   styles: []
 })

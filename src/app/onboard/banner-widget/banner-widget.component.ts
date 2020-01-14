@@ -2,7 +2,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ph-spl-banner-widget',
+  selector: 'ds-banner-widget',
   templateUrl: './banner-widget.component.html',
   styleUrls: ['./banner-widget.component.css']
 })

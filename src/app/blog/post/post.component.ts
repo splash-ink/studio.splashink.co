@@ -6,7 +6,7 @@ import { PostModel } from './post.model';
 import { SeoService } from '@core/seo.service';
 
 @Component({
-  selector: 'ph-spl-post',
+  selector: 'ds-post',
   templateUrl: './post.component.html',
   styles: [
     `

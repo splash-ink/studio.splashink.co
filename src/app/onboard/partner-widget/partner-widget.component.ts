@@ -4,7 +4,7 @@ import { BACKERS } from './../../data';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: 'ph-spl-partner-widget',
+  selector: 'ds-partner-widget',
   templateUrl: './partner-widget.component.html',
   styles: []
 })
