@@ -6806,7 +6806,7 @@ textarea.input-bg {
   float: none !important
 }
 
-/*============================== 
+/*==============================
     Position
 ================================*/
 
@@ -7479,7 +7479,7 @@ textarea.input-bg {
 }
 
 
-/*================================ 
+/*================================
     Height
 ================================*/
 
@@ -8899,7 +8899,7 @@ footer .small-icon li {
   vertical-align: middle;
 }
 
-/* 
+/*
 .icon-country.usa {
   background: url("assets/images/countries/country-flag-16X16/usa.png")
 }
@@ -11268,7 +11268,7 @@ nav.navbar.sidebar-nav {
   width: auto;
   left: 0;
   height: 100%;
-  background-color: #fff;
+  background-color: #0a0909;
   z-index: 99999;
   transition: all 0.3s ease 0s
 }
