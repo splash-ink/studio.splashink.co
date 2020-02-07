@@ -1,6 +1,6 @@
 {
   "name": "studio.splashink.co",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Digital Studio | Splash Ink - official website",
   "scripts": {
     "ng": "ng",
