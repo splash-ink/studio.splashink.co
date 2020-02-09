@@ -1,20 +1,28 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { SeoService } from '@core/seo.service';
 
 @Component({
   selector: 'ds-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(
+      @Inject(DOCUMENT) private document: Document,
+      private readonly seo: SeoService
+    ) {
+      this.seo.startRouteListener();
+      this.initApp();
+    }
 
-    ngOnInit(): void {
-      const c = this.document.body.classList.contains('left-nav-sidebar');
+    private initApp() {
+      const className = 'left-nav-sidebar';
+      const query = this.document.body.classList.contains(className);
 
-      if (!c) {
-        this.document.body.classList.add('left-nav-sidebar');
+      if (!query) {
+        this.document.body.classList.add(className);
       }
     }
 }
