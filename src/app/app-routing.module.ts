@@ -16,7 +16,11 @@ const routes: Routes = [
     path: 'pricing',
     loadChildren: () => import('@pricing/pricing.module').then(m => m.PricingModule)
   },
-  { path: '', component: OnboardComponent }
+  {
+    path: '',
+    pathMatch: 'full',
+    component: OnboardComponent
+   }
 ];
 
 @NgModule({
