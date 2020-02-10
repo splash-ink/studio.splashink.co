@@ -12,18 +12,17 @@ export class PricingComponent implements OnInit {
 
   docs: PriceModel [];
   qna: AccordionModel [];
-  constructor(private seo: SeoService) { }
 
-  ngOnInit() {
+  constructor(private readonly seo: SeoService) {
     this.seo.generateTags({
       title: 'Preçários - Q&A',
       description: 'Ajustamos tudo para que minimize seus custos com preços bem definidos e aproveite dos nossos serviços.',
       image: 'https://domain-to-picture.com',
       slug: 'pricing'
     });
+  }
 
-    this.seo.updateCanonicalTag('https://studio.splashink.co/pricing');
-
+  ngOnInit() {
     this.docs = PRICINGS;
     this.qna = QnA;
   }
