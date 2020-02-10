@@ -1,16 +1,39 @@
-import { Injectable, Inject } from '@angular/core';
+import { Injectable, Inject, RendererFactory2, ViewEncapsulation, OnDestroy } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
-import { isEmpty } from 'rxjs/operators';
+import { Router, NavigationEnd } from '@angular/router';
 
+import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
+
+export declare type LinkDefinition = {
+  charset?: string;
+  crossorigin?: string;
+  href?: string;
+  hreflang?: string;
+  media?: string;
+  rel?: string;
+  rev?: string;
+  sizes?: string;
+  target?: string;
+  type?: string;
+} &
+{
+  [prop: string]: string;
+};
 @Injectable({
   providedIn: 'root'
 })
-export class SeoService {
+export class SeoService implements OnDestroy {
 
-  constructor(private meta: Meta,
-     private title: Title,
-      @Inject(DOCUMENT) private document: Document) { }
+  private routeListener: Subscription;
+
+  constructor(
+    private meta: Meta,
+    private title: Title,
+    @Inject(DOCUMENT) private readonly document: Document,
+    private readonly router: Router,
+  ) { }
 
   generateTags(config) {
     config = {
@@ -38,14 +61,50 @@ export class SeoService {
 
   }
 
-  updateCanonicalTag(slug) {
-    if (typeof slug !== 'string' || slug === undefined) {
-      return;
+  startRouteListener(): void {
+    this.routeListener = this.router
+
+    .events
+    .pipe (filter(event => event instanceof NavigationEnd))
+    .subscribe(
+      () => {
+        let url = '';
+        const urlTree = this.router.parseUrl(this.router.url);
+
+        if (urlTree.root.hasChildren()) {
+          const segments = urlTree.root.children['primary'].segments;
+
+          if (segments && segments.length > 0) {
+            url = segments.map(segment => segment.path).join('/');
+          }
+        }
+
+        this.updateTag({
+          rel: 'canonical',
+          href: `/${url}`
+        });
+      }
+    );
+  }
+
+  updateTag(tag: LinkDefinition): void {
+    const selector = this._parseSelector(tag);
+    const linkElement = <HTMLLinkElement> this.document.head.querySelector(selector)
+      || this.document.head.appendChild(this.document.createElement('link'));
+
+    if (linkElement) {
+      Object.keys(tag).forEach((prop: string) => {
+        linkElement[prop] = tag[prop];
+      });
     }
+  }
 
-    this.document
+  private _parseSelector(tag: LinkDefinition): string {
+    const attr: string = tag.rel ? 'rel' : 'hreflang';
+    return `link[${attr}="${tag[attr]}"]`;
+  }
 
-    .querySelector('#canonical')
-    .setAttribute('href', `https://www.studio.splashink.co/${slug}`);
+  ngOnDestroy(): void {
+    this.routeListener.unsubscribe();
   }
 }
