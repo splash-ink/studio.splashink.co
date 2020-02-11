@@ -159,5 +159,8 @@
       }
     }
   },
-  "defaultProject": "DigitalStudio"
+  "defaultProject": "DigitalStudio",
+  "cli": {
+    "analytics": true
+  }
 }
