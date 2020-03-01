@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 export interface Banner {
   title: string;
@@ -11,6 +11,8 @@ export interface Banner {
   styleUrls: ['./banner-widget.component.css']
 })
 export class BannerWidgetComponent {
+
+  @ViewChild('sec') ref: ElementRef;
 
   constructor() { }
 }
