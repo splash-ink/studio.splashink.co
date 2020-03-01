@@ -23,12 +23,14 @@ import { SeoService } from '@core/seo.service';
 export class PostComponent implements OnInit, OnDestroy {
 
   doc$: PostModel;
-  helper: Subscription;
-  /// alias for async fields
+  subs: Subscription;
   startWith = '';
-  constructor(private fds: FirestoreDataService,
-     private sanitizer: DomSanitizer,
-     private seo: SeoService) { }
+
+  constructor(
+    private fds: FirestoreDataService,
+    private sanitizer: DomSanitizer,
+    private seo: SeoService
+  ) { }
 
   syncBg() {
     return this.sanitizer.bypassSecurityTrustStyle(`
@@ -39,7 +41,7 @@ export class PostComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.helper = this.fds.doc$<PostModel>('blog/LYE0cQ2QPfMz3svXiGfW')
+    this.subs = this.fds.doc$<PostModel>('blog/LYE0cQ2QPfMz3svXiGfW')
     .subscribe(payload => {
       this.seo.generateTags({
         title: `Blog :: ${payload.title}`,
@@ -56,7 +58,7 @@ export class PostComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.helper.unsubscribe();
+    this.subs.unsubscribe();
   }
 
 }
