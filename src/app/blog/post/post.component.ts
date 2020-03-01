@@ -42,18 +42,19 @@ export class PostComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subs = this.fds.doc$<PostModel>('blog/LYE0cQ2QPfMz3svXiGfW')
-    .subscribe(payload => {
+    .subscribe(doc => {
+
       this.seo.generateTags({
-        title: `Blog :: ${payload.title}`,
+        title: `Blog :: ${doc.title}`,
         description: 'Leia o artigo completo clicando na ligação.',
-        image: payload.thumbnail,
-        slug: `blog/${payload.pid}`
+        image: doc.thumbnail,
+        slug: `blog/${doc.pid}`
       });
 
-      this.doc$ = payload;
+      this.startWith = doc.body.charAt(0);
+      doc.body.substring(1);
 
-      this.startWith = this.doc$.body.charAt(0);
-      this.doc$.body = this.doc$.body.substring(1);
+      this.doc$ = doc;
     });
   }
 
