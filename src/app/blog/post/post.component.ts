@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, AfterViewInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { FirestoreDataService } from '@core/firestore-data.service';
 import { Subscription } from 'rxjs';
 import { PostModel } from './post.model';
@@ -19,7 +19,7 @@ import { SeoService } from '@core/seo.service';
     `
   ]
 })
-export class PostComponent implements OnInit, AfterViewInit, OnDestroy {
+export class PostComponent implements OnInit, OnDestroy {
 
   doc$: PostModel;
   subs: Subscription;
@@ -44,14 +44,19 @@ export class PostComponent implements OnInit, AfterViewInit, OnDestroy {
         slug: `blog/${doc.pid}`
       });
 
+      this.renderer
+      .setStyle(
+        this.ref.nativeElement,
+        'background-image',
+        `url('${doc?.thumbnail}')`
+      );
+
       this.startWith = doc.body.charAt(0);
       doc.body.substring(1);
 
       this.doc$ = doc;
     });
   }
-
-  ngAfterViewInit() {}
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
