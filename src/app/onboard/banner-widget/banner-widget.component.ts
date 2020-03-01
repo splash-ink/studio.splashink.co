@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 
 export interface Banner {
   title: string;
@@ -19,5 +19,5 @@ export class BannerWidgetComponent {
     imageUrl: 'assets/images/landing-cover.jpg'
   };
 
-  constructor() { }
+  constructor(private readonly renderer: Renderer2) { }
 }
