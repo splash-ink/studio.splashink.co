@@ -1,5 +1,5 @@
 import { DomSanitizer } from '@angular/platform-browser';
-import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { FirestoreDataService } from '@core/firestore-data.service';
 import { Subscription } from 'rxjs';
 import { PostModel } from './post.model';
@@ -25,6 +25,8 @@ export class PostComponent implements OnInit, AfterViewInit, OnDestroy {
   doc$: PostModel;
   subs: Subscription;
   startWith = '';
+
+  @ViewChild('sec') ref: ElementRef;
 
   constructor(
     private fds: FirestoreDataService,
