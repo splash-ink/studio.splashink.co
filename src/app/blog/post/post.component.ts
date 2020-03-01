@@ -1,5 +1,5 @@
 import { DomSanitizer } from '@angular/platform-browser';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { FirestoreDataService } from '@core/firestore-data.service';
 import { Subscription } from 'rxjs';
 import { PostModel } from './post.model';
@@ -20,7 +20,7 @@ import { SeoService } from '@core/seo.service';
     `
   ]
 })
-export class PostComponent implements OnInit, OnDestroy {
+export class PostComponent implements OnInit, AfterViewInit, OnDestroy {
 
   doc$: PostModel;
   subs: Subscription;
@@ -57,6 +57,8 @@ export class PostComponent implements OnInit, OnDestroy {
       this.doc$ = doc;
     });
   }
+
+  ngAfterViewInit() {}
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
