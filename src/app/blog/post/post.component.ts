@@ -1,5 +1,4 @@
-import { DomSanitizer } from '@angular/platform-browser';
-import { Component, OnInit, OnDestroy, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { FirestoreDataService } from '@core/firestore-data.service';
 import { Subscription } from 'rxjs';
 import { PostModel } from './post.model';
@@ -29,18 +28,10 @@ export class PostComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('sec') ref: ElementRef;
 
   constructor(
-    private fds: FirestoreDataService,
-    private sanitizer: DomSanitizer,
-    private seo: SeoService
+    private readonly fds: FirestoreDataService,
+    private readonly seo: SeoService,
+    private readonly renderer: Renderer2,
   ) { }
-
-  syncBg() {
-    return this.sanitizer.bypassSecurityTrustStyle(`
-    background-image: url('${this.doc$.thumbnail}');
-    visibility: visible;
-    animation-name: fadeIn;
-    padding: 40px 0;`);
-  }
 
   ngOnInit() {
     this.subs = this.fds.doc$<PostModel>('blog/LYE0cQ2QPfMz3svXiGfW')
