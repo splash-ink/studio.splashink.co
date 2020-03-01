@@ -14,5 +14,10 @@ export class BannerWidgetComponent {
 
   @ViewChild('sec') ref: ElementRef;
 
+  banner: Banner = {
+    title: 'Nós combinamos design, pensamento e técnica.',
+    imageUrl: 'assets/images/landing-cover.jpg'
+  };
+
   constructor() { }
 }
