@@ -10,7 +10,7 @@ export interface Banner {
   templateUrl: './banner-widget.component.html',
   styleUrls: ['./banner-widget.component.css']
 })
-export class BannerWidgetComponent {
+export class BannerWidgetComponent implements AfterViewInit {
 
   @ViewChild('sec') ref: ElementRef;
 
@@ -20,4 +20,12 @@ export class BannerWidgetComponent {
   };
 
   constructor(private readonly renderer: Renderer2) { }
+
+  ngAfterViewInit() {
+    this.renderer.setStyle(
+      this.ref.nativeElement,
+      'background-image',
+      `url('${this.banner?.imageUrl}')`
+    );
+  }
 }
