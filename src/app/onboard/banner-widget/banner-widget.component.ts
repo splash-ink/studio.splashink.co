@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+export interface Banner {
+  title: string;
+  imageUrl: string;
+}
+
 @Component({
   selector: 'ds-banner-widget',
   templateUrl: './banner-widget.component.html',
