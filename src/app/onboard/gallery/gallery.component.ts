@@ -2,8 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { GalleryModel } from '@gallery/gallery.model';
 
 @Component({
-  selector: 'ds-gallery-widget',
-  templateUrl: './gallery-widget.component.html',
+  selector: 'ds-gallery',
+  templateUrl: './gallery.component.html',
   styles: [`
     .gallery-item {
       visibility: visible;
@@ -12,7 +12,7 @@ import { GalleryModel } from '@gallery/gallery.model';
     }
   `]
 })
-export class GalleryWidgetComponent implements OnInit {
+export class GalleryComponent implements OnInit {
 
   @Input() data: GalleryModel;
   constructor() { }

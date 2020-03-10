@@ -4,11 +4,11 @@ import { Observable } from 'rxjs';
 import { FirestoreDataService } from '@core/firestore-data.service';
 
 @Component({
-  selector: 'ds-filter-widget',
-  templateUrl: './filter-widget.component.html',
-  styleUrls: ['filter-widget.component.css']
+  selector: 'ds-filter',
+  templateUrl: './filter.component.html',
+  styleUrls: ['filter.component.css']
 })
-export class FilterWidgetComponent implements OnInit {
+export class FilterComponent implements OnInit {
 
   docs$: Observable<GalleryModel[]>;
   constructor(private fds: FirestoreDataService) { }

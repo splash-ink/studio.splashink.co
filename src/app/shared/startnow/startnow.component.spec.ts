@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StartnowWidgetComponent } from './startnow-widget.component';
+import { StartnowComponent } from './startnow.component';
 
 describe('⚡ Startnow Widget', () => {
-  let component: StartnowWidgetComponent;
-  let fixture: ComponentFixture<StartnowWidgetComponent>;
+  let component: StartnowComponent;
+  let fixture: ComponentFixture<StartnowComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StartnowWidgetComponent ]
+      declarations: [ StartnowComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StartnowWidgetComponent);
+    fixture = TestBed.createComponent(StartnowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
