@@ -1,14 +1,14 @@
 import { Component, AfterViewInit, Inject } from '@angular/core';
 import { PartnerModel } from './partner.model';
-import { BACKERS } from './../../data';
+import { BACKERS } from '../../data';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: 'ds-partner-widget',
-  templateUrl: './partner-widget.component.html',
+  selector: 'ds-partner',
+  templateUrl: './partner.component.html',
   styles: []
 })
-export class PartnerWidgetComponent implements AfterViewInit {
+export class PartnerComponent implements AfterViewInit {
 
   docs$: PartnerModel [] = BACKERS;
 

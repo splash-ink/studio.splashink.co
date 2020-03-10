@@ -6,11 +6,11 @@ export interface Banner {
 }
 
 @Component({
-  selector: 'ds-banner-widget',
-  templateUrl: './banner-widget.component.html',
-  styleUrls: ['./banner-widget.component.css']
+  selector: 'ds-banner',
+  templateUrl: './banner.component.html',
+  styleUrls: ['./banner.component.css']
 })
-export class BannerWidgetComponent implements AfterViewInit {
+export class BannerComponent implements AfterViewInit {
 
   @ViewChild('sec') ref: ElementRef;
 

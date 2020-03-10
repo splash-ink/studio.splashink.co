@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PriceModel } from './price.model';
 import { PRICINGS, QnA } from 'app/data';
-import { AccordionModel } from './accordion-widget/accordion.model';
+import { AccordionModel } from './accordion/accordion.model';
 import { SeoService } from '@core/seo.service';
 
 @Component({

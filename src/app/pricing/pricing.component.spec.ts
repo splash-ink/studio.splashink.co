@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PricingComponent } from './pricing.component';
-import { AccordionWidgetComponent } from './accordion-widget/accordion-widget.component';
-import { PriceWidgetComponent } from './price-widget/price-widget.component';
+import { AccordionComponent } from './accordion/accordion.component';
+import { PriceComponent } from './price/price.component';
 
 describe('⚡ Pricing Page', () => {
   let component: PricingComponent;
@@ -12,8 +12,8 @@ describe('⚡ Pricing Page', () => {
     TestBed.configureTestingModule({
       declarations: [
         PricingComponent,
-        AccordionWidgetComponent,
-        PriceWidgetComponent
+        AccordionComponent,
+        PriceComponent
       ]
     })
     .compileComponents();

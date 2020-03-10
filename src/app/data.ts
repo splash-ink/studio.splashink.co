@@ -1,7 +1,7 @@
-import { PartnerModel } from './onboard/partner-widget/partner.model';
+import { PartnerModel } from './onboard/partner/partner.model';
 import { GalleryModel, ImageModel } from '@gallery/gallery.model';
 import { PriceModel } from '@pricing/price.model';
-import { AccordionModel } from '@pricing/accordion-widget/accordion.model';
+import { AccordionModel } from '@pricing/accordion/accordion.model';
 
 export const PICTURES: ImageModel [] = [
     {

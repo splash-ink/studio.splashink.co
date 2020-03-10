@@ -1,17 +1,17 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
-import { BannerWidgetComponent } from './banner-widget.component';
+import { BannerComponent } from './banner.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
-describe('⚡ Banner Widget', () => {
-    let fixture: ComponentFixture<BannerWidgetComponent>;
+describe('⚡ Banner', () => {
+    let fixture: ComponentFixture<BannerComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [BannerWidgetComponent],
+            declarations: [BannerComponent],
             schemas: [NO_ERRORS_SCHEMA]
         }).compileComponents();
 
-        fixture = TestBed.createComponent(BannerWidgetComponent);
+        fixture = TestBed.createComponent(BannerComponent);
     }));
 
     it('🧪 should create the Widget', () => {

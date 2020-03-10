@@ -4,7 +4,7 @@
       <div *ngFor="let doc of docs" [ngClass]="{'highlight': doc.highlighted}"
         class="col-12 col-lg-3 col-md-6  text-center md-margin-30px-bottom wow fadeInUp"
         style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-        <ds-price-widget [data]="doc"></ds-price-widget>
+        <ds-price [data]="doc"></ds-price>
       </div>
     </div>
   </div>
@@ -18,7 +18,7 @@
         <div
           class="w-100 padding-thirteen-all lg-padding-ten-all md-padding-six-all sm-padding-50px-tb sm-no-padding-lr">
           <div class="panel-group accordion-style1" id="accordion-design">
-            <ds-accordion-widget *ngFor="let question of qna" [data]="question"></ds-accordion-widget>            
+            <ds-accordion *ngFor="let question of qna" [data]="question"></ds-accordion>
           </div>
         </div>
       </div>

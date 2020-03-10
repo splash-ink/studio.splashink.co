@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { PricingRoutingModule } from './pricing-routing.module';
 import { PricingComponent } from './pricing.component';
-import { PriceWidgetComponent } from './price-widget/price-widget.component';
-import { AccordionWidgetComponent } from './accordion-widget/accordion-widget.component';
+import { PriceComponent } from './price/price.component';
+import { AccordionComponent } from './accordion/accordion.component';
 
 @NgModule({
-  declarations: [PricingComponent, PriceWidgetComponent, AccordionWidgetComponent],
+  declarations: [PricingComponent, PriceComponent, AccordionComponent],
   imports: [
     CommonModule,
     PricingRoutingModule

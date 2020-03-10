@@ -1,17 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { FilterWidgetComponent } from './filter-widget.component';
-import { GalleryWidgetComponent } from '../gallery-widget/gallery-widget.component';
+import { FilterComponent } from './filter.component';
+import { GalleryComponent } from '../gallery/gallery.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
-describe('FilterWidgetComponent', () => {
-  let component: FilterWidgetComponent;
-  let fixture: ComponentFixture<FilterWidgetComponent>;
+describe('Filter', () => {
+  let component: FilterComponent;
+  let fixture: ComponentFixture<FilterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FilterWidgetComponent, GalleryWidgetComponent ],
+      declarations: [ FilterComponent, GalleryComponent ],
       imports: [RouterTestingModule],
       schemas: [NO_ERRORS_SCHEMA]
     })
@@ -19,7 +19,7 @@ describe('FilterWidgetComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FilterWidgetComponent);
+    fixture = TestBed.createComponent(FilterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

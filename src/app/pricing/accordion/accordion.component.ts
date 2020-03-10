@@ -3,11 +3,11 @@ import { DOCUMENT } from '@angular/common';
 import { AccordionModel } from './accordion.model';
 
 @Component({
-  selector: 'ds-accordion-widget',
-  templateUrl: './accordion-widget.component.html',
+  selector: 'ds-accordion',
+  templateUrl: './accordion.component.html',
   styles: []
 })
-export class AccordionWidgetComponent implements AfterViewInit {
+export class AccordionComponent implements AfterViewInit {
 
   @Input('data') doc: AccordionModel;
 

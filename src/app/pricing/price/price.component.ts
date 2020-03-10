@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { PriceModel } from '@pricing/price.model';
 
 @Component({
-  selector: 'ds-price-widget',
-  templateUrl: './price-widget.component.html',
+  selector: 'ds-price',
+  templateUrl: './price.component.html',
   styles: []
 })
-export class PriceWidgetComponent {
+export class PriceComponent {
 
   @Input('data') doc: PriceModel;
   constructor() { }

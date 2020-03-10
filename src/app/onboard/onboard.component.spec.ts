@@ -1,9 +1,9 @@
 import { By } from '@angular/platform-browser';
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { OnboardComponent } from './onboard.component';
-import { BannerWidgetComponent } from './banner-widget/banner-widget.component';
-import { PartnerWidgetComponent } from './partner-widget/partner-widget.component';
-import { FilterWidgetComponent } from './filter-widget/filter-widget.component';
+import { BannerComponent } from './banner/banner.component';
+import { PartnerComponent } from './partner/partner.component';
+import { FilterComponent } from './filter/filter.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('⚡ Onboard Page', () => {
@@ -12,10 +12,10 @@ describe('⚡ Onboard Page', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [
-                OnboardComponent,
-                BannerWidgetComponent,
-                FilterWidgetComponent,
-                PartnerWidgetComponent
+              OnboardComponent,
+              BannerComponent,
+              FilterComponent,
+              PartnerComponent
             ],
             schemas: [NO_ERRORS_SCHEMA]
         }).compileComponents();
@@ -30,7 +30,7 @@ describe('⚡ Onboard Page', () => {
 
     it(`🧪 should contain "Banner Widget"`, () => {
         fixture.detectChanges();
-        const bannerEl = fixture.debugElement.queryAll(By.directive(BannerWidgetComponent));
+        const bannerEl = fixture.debugElement.queryAll(By.directive(BannerComponent));
         expect(bannerEl).toBeTruthy();
     });
 });
