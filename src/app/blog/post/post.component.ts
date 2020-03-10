@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy, ElementRef, ViewChild, Renderer2 } from '@angular/core';
-import { FirestoreDataService } from '@core/firestore-data.service';
+import { FirestoreDataService } from '../../core/firestore-data.service';
 import { Subscription } from 'rxjs';
 import { PostModel } from './post.model';
-import { SeoService } from '@core/seo.service';
+import { SeoService } from '@studio/core';
 
 @Component({
   selector: 'ds-post',

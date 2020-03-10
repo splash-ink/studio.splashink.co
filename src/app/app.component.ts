@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { SeoService } from '@core/seo.service';
+import { SeoService } from '@studio/core';
 
 @Component({
   selector: 'ds-root',

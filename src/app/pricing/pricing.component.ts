@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PriceModel } from './price.model';
 import { PRICINGS, QnA } from 'app/data';
 import { AccordionModel } from './accordion/accordion.model';
-import { SeoService } from '@core/seo.service';
+import { SeoService } from '@studio/core';
 
 @Component({
   templateUrl: './pricing.component.html',
