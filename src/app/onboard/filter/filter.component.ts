@@ -1,7 +1,7 @@
 import { GalleryModel } from '@gallery/gallery.model';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { FirestoreDataService } from '@core/firestore-data.service';
+import { FirestoreDataService } from '../../core/firestore-data.service';
 
 @Component({
   selector: 'ds-filter',
