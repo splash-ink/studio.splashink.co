@@ -4,7 +4,7 @@
     "baseUrl": "src",
     "paths": {
       "@blog/*": ["app/blog/*"],
-      "@core/*": ["app/core/*"],
+      "@studio/core": ["app/core/index.ts"],
       "@environments/*": ["environments/*"],
       "@gallery/*": ["app/gallery/*"],
       "@pricing/*": ["app/pricing/*"],
