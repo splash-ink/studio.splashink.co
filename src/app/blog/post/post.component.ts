@@ -1,5 +1,4 @@
-import { DomSanitizer } from '@angular/platform-browser';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { FirestoreDataService } from '@core/firestore-data.service';
 import { Subscription } from 'rxjs';
 import { PostModel } from './post.model';
@@ -23,40 +22,44 @@ import { SeoService } from '@core/seo.service';
 export class PostComponent implements OnInit, OnDestroy {
 
   doc$: PostModel;
-  helper: Subscription;
-  /// alias for async fields
+  subs: Subscription;
   startWith = '';
-  constructor(private fds: FirestoreDataService,
-     private sanitizer: DomSanitizer,
-     private seo: SeoService) { }
 
-  syncBg() {
-    return this.sanitizer.bypassSecurityTrustStyle(`
-    background-image: url('${this.doc$.thumbnail}');
-    visibility: visible;
-    animation-name: fadeIn;
-    padding: 40px 0;`);
-  }
+  @ViewChild('sec') ref: ElementRef;
+
+  constructor(
+    private readonly fds: FirestoreDataService,
+    private readonly seo: SeoService,
+    private readonly renderer: Renderer2,
+  ) { }
 
   ngOnInit() {
-    this.helper = this.fds.doc$<PostModel>('blog/LYE0cQ2QPfMz3svXiGfW')
-    .subscribe(payload => {
+    this.subs = this.fds.doc$<PostModel>('blog/LYE0cQ2QPfMz3svXiGfW')
+    .subscribe(doc => {
+
       this.seo.generateTags({
-        title: `Blog :: ${payload.title}`,
+        title: `Blog :: ${doc.title}`,
         description: 'Leia o artigo completo clicando na ligação.',
-        image: payload.thumbnail,
-        slug: `blog/${payload.pid}`
+        image: doc.thumbnail,
+        slug: `blog/${doc.pid}`
       });
 
-      this.doc$ = payload;
+      this.renderer
+      .setStyle(
+        this.ref.nativeElement,
+        'background-image',
+        `url('${doc?.thumbnail}')`
+      );
 
-      this.startWith = this.doc$.body.charAt(0);
-      this.doc$.body = this.doc$.body.substring(1);
+      this.startWith = doc.body.charAt(0);
+      doc.body.substring(1);
+
+      this.doc$ = doc;
     });
   }
 
   ngOnDestroy(): void {
-    this.helper.unsubscribe();
+    this.subs.unsubscribe();
   }
 
 }

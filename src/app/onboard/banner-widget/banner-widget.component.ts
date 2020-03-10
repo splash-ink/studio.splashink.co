@@ -1,28 +1,31 @@
-import { DomSanitizer } from '@angular/platform-browser';
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+
+export interface Banner {
+  title: string;
+  imageUrl: string;
+}
 
 @Component({
   selector: 'ds-banner-widget',
   templateUrl: './banner-widget.component.html',
   styleUrls: ['./banner-widget.component.css']
 })
-export class BannerWidgetComponent implements OnInit {
+export class BannerWidgetComponent implements AfterViewInit {
 
-  title = 'Nós combinamos design, pensamento e\
-  técnica.';
+  @ViewChild('sec') ref: ElementRef;
 
-  imgUrl = 'assets/images/landing-cover.jpg';
+  banner: Banner = {
+    title: 'Nós combinamos design, pensamento e técnica.',
+    imageUrl: 'assets/images/landing-cover.jpg'
+  };
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private readonly renderer: Renderer2) { }
 
-  setOnboardImage() {
-    if (typeof(this.imgUrl) === undefined) { return; }
-
-    const style = `background-image: url(${this.imgUrl});`;
-    return this.sanitizer.bypassSecurityTrustStyle(style);
+  ngAfterViewInit() {
+    this.renderer.setStyle(
+      this.ref.nativeElement,
+      'background-image',
+      `url('${this.banner?.imageUrl}')`
+    );
   }
-
-  ngOnInit() {
-  }
-
 }
