@@ -6,7 +6,7 @@
       "@studio/blog": ["app/blog/index.ts"],
       "@studio/core": ["app/core/index.ts"],
       "@environments/*": ["environments/*"],
-      "@gallery/*": ["app/gallery/*"],
+      "@studio/gallery": ["app/gallery/index.ts"],
       "@pricing/*": ["app/pricing/*"],
       "@shared/*": ["app/shared/*"]
     },
