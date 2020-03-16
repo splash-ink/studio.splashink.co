@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { QuicklinkModule } from 'ngx-quicklink';
 
 import { CoreModule } from '@studio/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +26,7 @@ import { environment } from '@environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    QuicklinkModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule.enablePersistence(),
     CoreModule
