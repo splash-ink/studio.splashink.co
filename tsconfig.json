@@ -7,7 +7,7 @@
       "@studio/core": ["app/core/index.ts"],
       "@environments/*": ["environments/*"],
       "@studio/gallery": ["app/gallery/index.ts"],
-      "@pricing/*": ["app/pricing/*"],
+      "@studio/pricing": ["app/pricing/index.ts"],
       "@shared/*": ["app/shared/*"]
     },
     "outDir": "./dist/out-tsc",
