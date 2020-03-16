@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'gallery',
-    loadChildren: () => import('@gallery/gallery.module').then(m => m.GalleryModule)
+    loadChildren: () => import('@studio/gallery').then(m => m.GalleryModule)
   },
   {
     path: 'pricing',
