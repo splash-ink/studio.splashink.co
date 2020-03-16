@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GalleryModel } from '@gallery/gallery.model';
+import { GalleryModel } from '@studio/gallery';
 
 @Component({
   selector: 'ds-gallery',

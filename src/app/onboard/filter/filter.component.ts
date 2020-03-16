@@ -1,4 +1,4 @@
-import { GalleryModel } from '@gallery/gallery.model';
+import { GalleryModel } from '@studio/gallery';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FirestoreDataService } from '../../core/firestore-data.service';
