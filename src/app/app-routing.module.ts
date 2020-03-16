@@ -6,7 +6,7 @@ import { QuicklinkStrategy } from 'ngx-quicklink';
 const routes: Routes = [
   {
     path: 'blog',
-    loadChildren: () => import('@blog/blog.module').then(m => m.BlogModule)
+    loadChildren: () => import('@studio/blog').then(m => m.BlogModule)
   },
   {
     path: 'gallery',
