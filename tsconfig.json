@@ -8,7 +8,7 @@
       "@environments/*": ["environments/*"],
       "@studio/gallery": ["app/gallery/index.ts"],
       "@studio/pricing": ["app/pricing/index.ts"],
-      "@shared/*": ["app/shared/*"]
+      "@studio/shared": ["app/shared/index.ts"]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
