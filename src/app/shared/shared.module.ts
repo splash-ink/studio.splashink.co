@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { StartnowComponent } from './startnow/startnow.component';
 import { MdToHtmlPipe } from './md-to-html.pipe';
-import { QuicklinkModule } from 'ngx-quicklink';
 
 const comps = [
   StartnowComponent,
@@ -12,9 +11,8 @@ const comps = [
 
 @NgModule({
   declarations: [...comps],
-  exports: [...comps, QuicklinkModule],
+  exports: [...comps],
   imports: [
-    QuicklinkModule,
     CommonModule,
     RouterModule
   ]
