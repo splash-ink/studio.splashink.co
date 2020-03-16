@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'pricing',
-    loadChildren: () => import('@pricing/pricing.module').then(m => m.PricingModule)
+    loadChildren: () => import('@studio/pricing').then(m => m.PricingModule)
   },
   {
     path: '',
