@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { PriceModel } from '@pricing/price.model';
+import { PriceModel } from '../price.model';
 
 @Component({
   selector: 'ds-price',
