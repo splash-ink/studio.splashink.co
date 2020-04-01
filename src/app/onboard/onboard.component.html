@@ -7,7 +7,7 @@
         <ul
           class="blog-filter nav nav-tabs justify-content-center border-0 portfolio-filter-tab-1 font-weight-600 alt-font text-uppercase text-center margin-30px-tb text-small md-margin-40px-bottom sm-margin-20px-bottom">
           <li class="nav filter-text"
-              *ngFor="let filter of ['Manipulação de Imagem', 'Produto', 'Marca', 'Ilustração']">
+            *ngFor="let filter of ['Manipulação de Imagem', 'Produto', 'Marca', 'Ilustração']">
             <a [routerLink]="['galleries/tags', filter]" class="light-gray-text-link text-very-small filter-text">
               {{ filter }}
             </a>
@@ -20,10 +20,15 @@
     <div class="row blog-post-style4">
       <div class="col-12 px-3 p-md-0">
         <div class="filter-content overflow-hidden">
-        <ul class="galleries blog-grid blog-4col gutter-small" style="position: relative; min-height: 450px;">
+          <ul class="galleries blog-grid blog-4col gutter-small" style="position: relative; min-height: 450px;">
             <li class="grid-sizer"></li>
             <ds-gallery *ngFor="let gallery of [0]"></ds-gallery>
           </ul>
+        </div>
+        <div class="text-center">
+          <a routerLink="/gallery/all" class="btn btn-medium btn-rounded btn-transparent-light-gray  wow fadeInUp">
+            Ver todas as Galerias
+          </a>
         </div>
       </div>
     </div>
