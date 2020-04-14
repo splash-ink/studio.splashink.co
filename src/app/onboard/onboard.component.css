@@ -8,3 +8,10 @@
   font-size: 24px;
   line-height: 24px;
 }
+
+ /* Utils */
+
+.a-fadeIn {
+  visibility: visible;
+  animation-name: fadeIn;
+}
