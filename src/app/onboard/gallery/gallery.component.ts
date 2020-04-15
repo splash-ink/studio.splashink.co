@@ -14,9 +14,18 @@ import { GalleryModel } from '@studio/gallery';
 })
 export class GalleryComponent implements OnInit {
 
-  @Input() data: GalleryModel;
+  @Input() data?: GalleryModel;
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.data = this.data || {
+      id: 'afrikaneeze-19',
+      name: 'Afrikaneeze',
+      description: 'Lorem ipsun, dolor sept unger ol demnget.',
+      tags: ['photography', 'yearly-event'],
+      thumbnail: 'https://firebasestorage.googleapis.com/v0/b/disparos-digital-studio.appspot.com/o/Afrikaneeze%2Fafrikaneeze_medium_thumbnail.jpg?alt=media&token=de493ffd-99d9-4383-ab15-298aaecf7bd7',
+      photos: []
+    }
+  }
 
 }
