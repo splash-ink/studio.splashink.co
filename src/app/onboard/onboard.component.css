@@ -4,9 +4,21 @@
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
+.galleries > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .title-medium {
   font-size: 24px;
   line-height: 24px;
+}
+
+.filter-text {
+  font-weight: 600;
+  font-size: 12px;
+  border-bottom: none !important;
 }
 
 .partners {
