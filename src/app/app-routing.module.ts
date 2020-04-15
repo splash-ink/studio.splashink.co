@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { OnboardComponent } from './onboard/onboard.component';
 import { QuicklinkStrategy } from 'ngx-quicklink';
 
 const routes: Routes = [
@@ -19,7 +18,7 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: OnboardComponent
+    loadChildren: () => import('@studio/onboard').then(m => m.OnboardModule)
    }
 ];
 
