@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy, ElementRef, ViewChild, Renderer2 } from '@angular/core';
-import { FirestoreDataService } from '../../core/firestore-data.service';
 import { Subscription } from 'rxjs';
 import { PostModel } from './post.model';
 import { SeoService } from '@studio/core';
@@ -28,38 +27,37 @@ export class PostComponent implements OnInit, OnDestroy {
   @ViewChild('sec') ref: ElementRef;
 
   constructor(
-    private readonly fds: FirestoreDataService,
     private readonly seo: SeoService,
     private readonly renderer: Renderer2,
   ) { }
 
   ngOnInit() {
-    this.subs = this.fds.doc$<PostModel>('blog/LYE0cQ2QPfMz3svXiGfW')
-    .subscribe(doc => {
+    // this.subs = this.fds.doc$<PostModel>('blog/LYE0cQ2QPfMz3svXiGfW')
+    // .subscribe(doc => {
 
-      this.seo.generateTags({
-        title: `Blog :: ${doc.title}`,
-        description: 'Leia o artigo completo clicando na ligação.',
-        image: doc.thumbnail,
-        slug: `blog/${doc.pid}`
-      });
+    //   this.seo.generateTags({
+    //     title: `Blog :: ${doc.title}`,
+    //     description: 'Leia o artigo completo clicando na ligação.',
+    //     image: doc.thumbnail,
+    //     slug: `blog/${doc.pid}`
+    //   });
 
-      this.renderer
-      .setStyle(
-        this.ref.nativeElement,
-        'background-image',
-        `url('${doc?.thumbnail}')`
-      );
+    //   this.renderer
+    //   .setStyle(
+    //     this.ref.nativeElement,
+    //     'background-image',
+    //     `url('${doc?.thumbnail}')`
+    //   );
 
-      this.startWith = doc.body.charAt(0);
-      doc.body.substring(1);
+    //   this.startWith = doc.body.charAt(0);
+    //   doc.body.substring(1);
 
-      this.doc$ = doc;
-    });
+    //   this.doc$ = doc;
+    // });
   }
 
   ngOnDestroy(): void {
-    this.subs.unsubscribe();
+    // this.subs.unsubscribe();
   }
 
 }
