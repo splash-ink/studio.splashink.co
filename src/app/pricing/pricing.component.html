@@ -1,24 +1,26 @@
 <section class="wow fadeIn" style="visibility: visible; animation-name: fadeIn; padding: 100px 0;">
   <div class="container">
     <div class="row pricing-box-style1">
-      <div *ngFor="let doc of docs" [ngClass]="{'highlight': doc.highlighted}"
+      <div *ngFor="let plan of pricingPlans$" [ngClass]="{'highlight': plan.highlighted}"
         class="col-12 col-lg-3 col-md-6  text-center md-margin-30px-bottom wow fadeInUp"
         style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-        <ds-price [data]="doc"></ds-price>
+        <ds-price [data]="plan"></ds-price>
       </div>
     </div>
   </div>
 </section>
 
-<section class="bg-extra-dark-gray border-0 p-0 wow fadeIn margin-35px-tb" style="visibility: visible; animation-name: fadeIn; padding: 0;">
+<section class="bg-extra-dark-gray border-0 p-0 wow fadeIn margin-35px-tb"
+  style="visibility: visible; animation-name: fadeIn; padding: 0;">
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-lg-6 d-flex align-items-center wow fadeIn"
         style="visibility: visible; animation-name: fadeIn;">
-        <div class="w-100 padding-thirteen-all lg-padding-ten-all md-padding-six-all sm-padding-50px-tb sm-no-padding-lr"
-        style="min-height: 400px;">
+        <div
+          class="w-100 padding-thirteen-all lg-padding-ten-all md-padding-six-all sm-padding-50px-tb sm-no-padding-lr"
+          style="min-height: 400px;">
           <div class="panel-group accordion-style1" id="accordion-design">
-            <ds-accordion *ngFor="let question of qna" [data]="question"></ds-accordion>
+            <ds-accordion *ngFor="let question of questionAndAsks$" [data]="question"></ds-accordion>
           </div>
         </div>
       </div>
@@ -41,9 +43,13 @@
       <div class="col-12 col-lg-4 text-center">
         <div
           class="d-flex flex-column justify-content-center position-relative padding-45px-all md-padding-30px-all h-100 bg-light-gray">
-          <span class="text-extra-dark-gray alt-font margin-10px-bottom d-inline-block text-medium">Eventos Especiais</span>
-          <p class="width-100">Todos os preços de eventos, além de casamentos e produtos, são feitos por orçamento de acordo a localidade e o espaço a ser usado.</p>
-          <a href="javascript:void(0);" class="btn btn-rounded bt-transparent-dark-gray btn-dark-gray btn-very-small text-extra-small">Solicitar Orçamento</a>
+          <span class="text-extra-dark-gray alt-font margin-10px-bottom d-inline-block text-medium">Eventos
+            Especiais</span>
+          <p class="width-100">Todos os preços de eventos, além de casamentos e produtos, são feitos por orçamento de
+            acordo a localidade e o espaço a ser usado.</p>
+          <a href="javascript:void(0);"
+            class="btn btn-rounded bt-transparent-dark-gray btn-dark-gray btn-very-small text-extra-small">Solicitar
+            Orçamento</a>
         </div>
       </div>
     </div>

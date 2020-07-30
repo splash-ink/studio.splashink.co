@@ -1,30 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { PriceModel } from './price.model';
+import { SeoService } from '@studio/core';
 import { PRICINGS, QnA } from 'app/data';
 import { AccordionModel } from './accordion/accordion.model';
-import { SeoService } from '@studio/core';
+import { PriceModel } from './price.model';
 
 @Component({
   templateUrl: './pricing.component.html',
-  styles: []
 })
 export class PricingComponent implements OnInit {
 
-  docs: PriceModel [];
-  qna: AccordionModel [];
+  pricingPlans$: PriceModel [];
+  questionAndAsks$: AccordionModel [];
 
-  constructor(private readonly seo: SeoService) {
-    this.seo.generateTags({
+  constructor(private readonly seoService: SeoService) {}
+
+  ngOnInit() {
+    this.seoService.generateTags({
       title: 'Preçários - Q&A',
       description: 'Ajustamos tudo para que minimize seus custos com preços bem definidos e aproveite dos nossos serviços.',
       image: 'https://domain-to-picture.com',
       slug: 'pricing'
     });
-  }
 
-  ngOnInit() {
-    this.docs = PRICINGS;
-    this.qna = QnA;
+    this.pricingPlans$ = PRICINGS;
+    this.questionAndAsks$ = QnA;
   }
 
 }
