@@ -4,7 +4,7 @@ import { GalleryComponent } from './gallery.component';
 
 const routes: Routes = [
   {
-    path: ':id',
+    path: ':id/:name',
     component: GalleryComponent
   },
   {
