@@ -8,7 +8,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "ci:build": "ng build --prod",
+    "ci:hosting": "firebase deploy --only hosting:studio-splashink"
   },
   "private": true,
   "dependencies": {
