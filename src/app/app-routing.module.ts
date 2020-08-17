@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { QuicklinkStrategy } from 'ngx-quicklink';
 
-const routes: Routes = [
+const routes: Routes =
   {
     path: 'blog',
     loadChildren: () => import('@studio/blog').then(m => m.BlogModule)
