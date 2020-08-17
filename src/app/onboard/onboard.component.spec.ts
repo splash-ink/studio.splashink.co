@@ -3,7 +3,6 @@ import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { OnboardComponent } from './onboard.component';
 import { BannerComponent } from './banner/banner.component';
 import { PartnerComponent } from './partner/partner.component';
-import { FilterComponent } from './filter/filter.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('⚡ Onboard Page', () => {
@@ -14,7 +13,6 @@ describe('⚡ Onboard Page', () => {
             declarations: [
               OnboardComponent,
               BannerComponent,
-              FilterComponent,
               PartnerComponent
             ],
             schemas: [NO_ERRORS_SCHEMA]

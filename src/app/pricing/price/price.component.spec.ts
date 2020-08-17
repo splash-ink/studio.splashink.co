@@ -3,8 +3,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { PriceComponent } from './price.component';
 
 describe('⚡ Price', () => {
-  let component: PriceWidgetComponent;
-  let fixture: ComponentFixture<PriceWidgetComponent>;
+  let component: PriceComponent;
+  let fixture: ComponentFixture<PriceComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
