@@ -10,12 +10,12 @@ const utils = [
 
 const comps = [
   GalleryComponent
-]
+];
 
 const shared = [
   ...utils,
   ...comps,
-]
+];
 @NgModule({
   declarations: [
     ...shared

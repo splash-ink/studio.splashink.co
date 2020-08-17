@@ -1,1 +1,1 @@
-export * from "./onboard.module";
+export * from './onboard.module';
