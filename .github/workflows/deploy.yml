@@ -22,9 +22,6 @@ jobs:
       - name: Check linting
         run: npm run lint
 
-      - name: Lint commit messages
-        uses: wagoid/commitlint-github-action@v2
-
       - name: Build app for Production
         run: npm run ci:build
 
