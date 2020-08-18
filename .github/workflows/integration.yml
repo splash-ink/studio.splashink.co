@@ -8,9 +8,24 @@ jobs:
   test_pull_request:
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v2
-        - uses: actions/setup-node@v1
+        - name: Checkout repository
+          uses: actions/checkout@v2
+          with:
+            fetch-depth: 0
+
+        - name: Setting up Nodejs
+          uses: actions/setup-node@v1
           with:
             node-version: 12
-        - run: npm ci
-        - run: npm run ci:build
+
+        - name: Installing dependencies
+          run: npm ci
+
+        - name: Check linting
+          run: npm run lint
+
+        - name: Lint commit messages
+          uses: wagoid/commitlint-github-action@v2
+
+        - name: Build app for Production
+          run: npm run ci:build
