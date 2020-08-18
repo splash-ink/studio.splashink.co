@@ -1,0 +1,36 @@
+name: Firebase Continuous Deployment
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+
+      - name: Setting up Nodejs
+        uses: actions/setup-node@master
+        with:
+          node-version: 12
+
+      - name: Installing dependencies
+        run: npm ci
+
+      - name: Check linting
+        run: npm run lint
+
+      - name: Lint commit messages
+        uses: wagoid/commitlint-github-action@v2
+
+      - name: Build app for Production
+        run: npm run ci:build
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting:studio-splashink
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
