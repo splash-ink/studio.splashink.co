@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "splashink-fc0bc"
+  },
+  "targets": {
+    "splashink-fc0bc": {
+      "hosting": {
+        "studio-splashink": [
+          "studio-splashink"
+        ]
+      }
+    }
   }
 }
