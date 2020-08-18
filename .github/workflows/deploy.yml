@@ -28,6 +28,6 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:studio-splashink
+          args: target:apply hosting hosting studio-splashink studio-splashink
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
