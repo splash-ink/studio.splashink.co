@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ci:build": "ng build --prod",
+    "config:env": "ts-node -O '{\"module\": \"commonjs\"}' ./config.index.ts",
+    "ci:build": "npm run config:env && ng build --prod",
     "ci:hosting": "firebase deploy --only hosting:studio-splashink"
   },
   "private": true,
