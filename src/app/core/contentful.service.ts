@@ -12,7 +12,7 @@ export class ContentfulService {
   private client = contentful.createClient({
     space: environment.contentful.spaceId,
     accessToken: environment.contentful.accessToken
-  })
+  });
 
   constructor() { }
 
