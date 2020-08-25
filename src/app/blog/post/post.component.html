@@ -1,15 +1,14 @@
-<ng-container *ngIf="doc$; else isEmpty">
   <section #sec class="wow fadeIn parallax" data-stellar-background-ratio="0.5">
     <div class="opacity-extra-medium post-bg-opacity"></div>
     <div class="container width-60">
       <div class="row justify-content-center">
         <div class="col-md-12 col-sm-12 col-xs-12 extra-small-screen display-table page-title-large">
           <div class="display-table-cell vertical-align-middle text-center">
-            <span
-              class="opacity6 alt-font text-extra-light-gray font-weight-600 txt-to-upper-case">{{ doc$?.updatedAt.toDate() | date }}</span>
-            | <span class="font-weight-600 txt-to-upper-case" *ngFor="let t of doc$?.tags"> {{ t }} </span>
-            <h1 class="alt-font text-white font-weight-600 letter-spacing-minus-1">Nós combinamos design, pensamento e
-              técnica.</h1>
+            <span class="opacity6 alt-font text-extra-light-gray font-weight-600 txt-to-upper-case">
+              {{ doc$?.publishDate | date }}
+            </span>
+            | <span class="font-weight-600 txt-to-upper-case"> COUPON CODE: {{ doc$?.coupon }} </span>
+            <h1 class="alt-font text-white font-weight-600 letter-spacing-minus-1">{{ doc$?.title }}</h1>
           </div>
         </div>
       </div>
@@ -24,14 +23,9 @@
             <p><span
                 class="first-letter first-letter-block bg-medium-gray text-extra-dark-gray txt-to-upper-case">{{ startWith }}</span>
             </p>
-            <span [innerHTML]="doc$?.body | mdToHtml"></span>
+            <span [innerHTML]="doc$?.body.substring(1) | mdToHtml"></span>
           </div>
         </div>
       </div>
     </section>
   </article>
-</ng-container>
-
-<ng-template #isEmpty>
-  Is empty!
-</ng-template>
