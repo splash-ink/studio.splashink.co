@@ -32,3 +32,16 @@
   background: transparent;
   border-color: #FFF;
 }
+
+.open-in-google-maps {
+  width: 100%;
+  position: absolute;
+  left: 32%;
+  bottom: 1.5rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .map {
+    height: 650px;
+  }
+}
