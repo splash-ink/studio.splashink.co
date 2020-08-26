@@ -20,7 +20,14 @@ const routes: Routes = [
     pathMatch: 'full',
     loadChildren: () => import('@studio/onboard').then(m => m.OnboardModule)
    },
-  { path: 'tags', loadChildren: () => import('./tags/tags.module').then(m => m.TagsModule) }
+  {
+    path: 'tags',
+    loadChildren: () => import('./tags/tags.module').then(m => m.TagsModule)
+  },
+  {
+    path: 'contactus',
+    loadChildren: () => import('./contactus/contactus.module').then(m => m.ContactusModule)
+  }
 ];
 
 @NgModule({

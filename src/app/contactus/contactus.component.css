@@ -1,0 +1,34 @@
+:host {
+  --primary-color: #154EA0;
+  --light-color: #FFFFFF;
+  --box-color: #FFF;
+}
+
+.group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: .5rem;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--box-color);
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  color: #000001;
+}
+
+.btn-deep-blue {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #ffffff
+}
+
+.btn-deep-blue:hover,
+.btn-deep-blue:focus {
+  background: transparent;
+  border-color: #FFF;
+}
