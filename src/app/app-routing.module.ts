@@ -18,8 +18,12 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
+    redirectTo: '/onboard',
+  },
+  {
+    path: 'onboard',
     loadChildren: () => import('@studio/onboard').then(m => m.OnboardModule)
-   },
+  },
   {
     path: 'tags',
     loadChildren: () => import('./tags/tags.module').then(m => m.TagsModule)
