@@ -27,7 +27,7 @@
     "contentful": "^7.14.6",
     "core-js": "^2.6.11",
     "firebase": "^6.6.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.1",
     "magnific-popup": "^1.1.0",
     "marked": "^0.7.0",
     "ngx-quicklink": "^0.1.5",
@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@angular-devkit/architect": "^0.803.22",
-    "@angular-devkit/build-angular": "~0.900.1",
+    "@angular-devkit/build-angular": "^0.1000.7",
     "@angular/cli": "^9.0.1",
     "@angular/compiler-cli": "^9.0.0",
     "@angular/language-service": "^9.0.0",
