@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SeoService } from '@studio/core';
 
 @Component({
   selector: 'ds-contactus',
@@ -14,9 +15,17 @@ export class ContactusComponent implements OnInit {
     message: ['', [Validators.required]]
   });
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private readonly seoServicce: SeoService
+  ) { }
 
   ngOnInit(): void {
+    this.seoServicce.generateTags({
+      title: `Contacte-nos - Splash Ink Studios`,
+        description: 'Entre em contacto com o Estúdio Digital para saber mais sobre os nossos Serviços.',
+        slug: `contactus`
+    });
   }
 
   get name() {
