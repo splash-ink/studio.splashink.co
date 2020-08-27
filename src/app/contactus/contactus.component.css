@@ -1,7 +1,13 @@
 :host {
   --primary-color: #154EA0;
   --light-color: #FFFFFF;
+  --light-gray-color: #C0C0C0;
   --box-color: #FFF;
+  --input-color: #FFF;
+}
+
+input, textarea {
+  color: var(--input-color) !important;
 }
 
 .group {
@@ -31,6 +37,10 @@
 .btn-deep-blue:focus {
   background: transparent;
   border-color: #FFF;
+}
+
+.btn-deep-blue:disabled {
+  cursor: not-allowed;
 }
 
 .open-in-google-maps {
