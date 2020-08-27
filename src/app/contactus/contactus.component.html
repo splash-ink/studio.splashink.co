@@ -21,25 +21,25 @@
             Entre em Contacto
           </h5>
 
-          <form>
+          <form [formGroup]="contactUsForm">
             <div class="row">
               <div class="col-12">
-                <div id="success-project-contact-form" class="mx-0"></div>
+                <div id="message" class="mx-0"></div>
               </div>
               <div class="col-12 col-lg-12">
-                <input type="text" placeholder="Nome completo *"
+                <input type="text" placeholder="Nome completo *" formControlName="name"
                   class="bg-transparent border-color-medium-dark-gray medium-input">
               </div>
               <div class="col-12 col-lg-12">
-                <input type="text" placeholder="E-mail *"
+                <input type="text" placeholder="E-mail *" formControlName="email"
                   class="bg-transparent border-color-medium-dark-gray medium-input">
               </div>
               <div class="col-12">
-                <textarea placeholder="Mensagem" rows="7"
+                <textarea placeholder="Mensagem" rows="7" formControlName="message"
                   class="bg-transparent border-color-medium-dark-gray medium-textarea"></textarea>
               </div>
               <div class="col-12 text-left">
-                <button type="submit" class="btn btn-rounded btn-deep-blue btn-medium">
+                <button [disabled]="!contactUsForm.valid" type="submit" class="btn btn-rounded btn-deep-blue btn-medium">
                   Enviar agora <i class="ti-arrow-right font-weight-600"></i>
                 </button>
               </div>
@@ -55,7 +55,7 @@
                   </div>
                   Phone
                 </div>
-                <a class="h5 text-white" href="tel:+244922679021">+244922679021</a>
+                <a class="h5" href="tel:+244922679021">+244922679021</a>
               </div>
               <div class="col">
                 <div class="group">
@@ -64,7 +64,7 @@
                   </div>
                   Email
                 </div>
-                <a class="h5 text-white" href="mailto:info@splashink.co">info@splashink.co</a>
+                <a class="h5" href="mailto:info@splashink.co">info@splashink.co</a>
               </div>
             </div>
           </div>
