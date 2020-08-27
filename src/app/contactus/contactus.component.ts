@@ -19,4 +19,15 @@ export class ContactusComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get name() {
+    return this.contactUsForm.get('name');
+  }
+
+  get email() {
+    return this.contactUsForm.get('email');
+  }
+
+  get message() {
+    return this.contactUsForm.get('message');
+  }
 }
