@@ -3,11 +3,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SeoService } from '@studio/core';
 
 @Component({
-  selector: 'ds-contactus',
-  templateUrl: './contactus.component.html',
-  styleUrls: ['./contactus.component.css']
+  templateUrl: './contact-us.component.html',
+  styleUrls: ['./contact-us.component.css']
 })
-export class ContactusComponent implements OnInit {
+export class ContactUsComponent implements OnInit {
 
   contactUsForm: FormGroup = this.formBuilder.group({
     name: ['', [Validators.required]],
