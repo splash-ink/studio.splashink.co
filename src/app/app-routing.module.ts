@@ -29,8 +29,8 @@ const routes: Routes = [
     loadChildren: () => import('./tags/tags.module').then(m => m.TagsModule)
   },
   {
-    path: 'contactus',
-    loadChildren: () => import('./contactus/contactus.module').then(m => m.ContactusModule)
+    path: 'contact-us',
+    loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
   }
 ];
 
