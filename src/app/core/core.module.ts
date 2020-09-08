@@ -5,6 +5,7 @@ import { NavComponent } from './nav/nav.component';
 import { throwIfAlreadyLoaded } from './module-import-guard';
 import { FooterComponent } from './footer/footer.component';
 import { SeoService } from './seo.service';
+import { ContentfulService } from './contentful.service';
 
 @NgModule({
   declarations: [NavComponent, FooterComponent],
@@ -14,7 +15,8 @@ import { SeoService } from './seo.service';
   ],
   exports: [NavComponent, FooterComponent],
   providers: [
-    SeoService
+    SeoService,
+    ContentfulService,
   ]
 })
 export class CoreModule {

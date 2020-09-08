@@ -2,17 +2,11 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { contentfulEnvironment } from './contentful.environment';
+
 export const environment = {
   production: false,
-  firebaseConfig: {
-    apiKey: 'AIzaSyB3c_MRj8E3PmiCivhhGExmFpae6dsEeHQ',
-    authDomain: 'disparos-digital-studio.firebaseapp.com',
-    databaseURL: 'https://disparos-digital-studio.firebaseio.com',
-    projectId: 'disparos-digital-studio',
-    storageBucket: '',
-    messagingSenderId: '280475922937',
-    appId: '1:280475922937:web:0c0ced00bd5729bb'
-  }
+  ...contentfulEnvironment
 };
 
 /*

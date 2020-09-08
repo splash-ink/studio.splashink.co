@@ -1,11 +1,11 @@
-import { firestore } from 'firebase';
-
 export interface PostModel {
-    pid?: string | number;
-    coupon?: string;
-    thumbnail: string;
-    title: string;
-    body: string;
-    tags: Array<string>;
-    updatedAt: firestore.Timestamp;
+  id?: string;
+  title: string;
+  slug: string;
+  backgroundImage: any;
+  body: string;
+  publishDate: Date;
+  coupon?: string;
 }
+
+
