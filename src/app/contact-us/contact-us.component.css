@@ -43,6 +43,10 @@ input, textarea {
   cursor: not-allowed;
 }
 
+.card {
+  border: none;
+}
+
 .open-in-google-maps {
   width: 100%;
   position: absolute;
