@@ -1,3 +1,4 @@
+// <reference types="googlemaps" />
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SeoService } from '@studio/core';
@@ -25,6 +26,20 @@ export class ContactUsComponent implements OnInit {
         description: 'Entre em contacto com o Estúdio Digital para saber mais sobre os nossos Serviços.',
         slug: `contactus`
     });
+
+    // let map: google.maps.Map;
+    // let marker: google.maps.Marker;
+    // const center: google.maps.LatLngLiteral = {lat: -8.7777977, lng: 13.3689446};
+
+    // map = new google.maps.Map(document.getElementById("mappp") as HTMLElement, {
+    //   center,
+    //   zoom: 15,
+    // });
+
+    // marker = new google.maps.Marker({
+    //   position: center,
+    //   map
+    // });
   }
 
   get name() {
