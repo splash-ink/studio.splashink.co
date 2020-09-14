@@ -28,14 +28,17 @@
               </div>
               <div class="col-12 col-lg-12">
                 <input type="text" placeholder="Nome completo *" formControlName="name"
+                  [ngClass]="{ 'required-error': formValidator.isInvalid(name) }"
                   class="bg-transparent border-color-medium-dark-gray medium-input">
               </div>
               <div class="col-12 col-lg-12">
                 <input type="text" placeholder="E-mail *" formControlName="email"
+                  [ngClass]="{ 'required-error': formValidator.isInvalid(email) }"
                   class="bg-transparent border-color-medium-dark-gray medium-input">
               </div>
               <div class="col-12">
                 <textarea placeholder="Mensagem" rows="7" formControlName="message"
+                  [ngClass]="{ 'required-error': formValidator.isInvalid(message) }"
                   class="bg-transparent border-color-medium-dark-gray medium-textarea"></textarea>
               </div>
               <div class="col-12 text-left">
