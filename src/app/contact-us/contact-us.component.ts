@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SeoService } from '@studio/core';
+import { FormValidationService } from '@studio/shared';
 
 @Component({
   templateUrl: './contact-us.component.html',
@@ -17,14 +18,15 @@ export class ContactUsComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private readonly seoServicce: SeoService
+    private readonly seoServicce: SeoService,
+    public readonly formValidator: FormValidationService
   ) { }
 
   ngOnInit(): void {
     this.seoServicce.generateTags({
       title: `Contacte-nos - Splash Ink Studios`,
         description: 'Entre em contacto com o Estúdio Digital para saber mais sobre os nossos Serviços.',
-        slug: `contactus`
+        slug: `contact-us`
     });
 
     // let map: google.maps.Map;
