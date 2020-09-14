@@ -81,7 +81,7 @@ export class SeoService implements OnDestroy {
 
         this.updateTag({
           rel: 'canonical',
-          href: `/${url}`
+          href: `https://studio.splashink.co/${url}`
         });
       }
     );

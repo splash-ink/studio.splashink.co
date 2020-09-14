@@ -18,9 +18,20 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
+    redirectTo: '/onboard',
+  },
+  {
+    path: 'onboard',
     loadChildren: () => import('@studio/onboard').then(m => m.OnboardModule)
-   },
-  { path: 'tags', loadChildren: () => import('./tags/tags.module').then(m => m.TagsModule) }
+  },
+  {
+    path: 'tags',
+    loadChildren: () => import('./tags/tags.module').then(m => m.TagsModule)
+  },
+  {
+    path: 'contact-us',
+    loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
+  }
 ];
 
 @NgModule({

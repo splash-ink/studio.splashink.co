@@ -1,0 +1,78 @@
+<section class="wow fadeIn p-0 bg-extra-dark-gray">
+  <div class="container-fluid">
+    <div class="row">
+      <div
+        class="col-12 col-md-6 cover-background padding-six-left md-padding-twelve-half-left sm-padding-15px-left md-height-450px sm-height-350px padding-five-half-tb md-padding-ten-half-tb wow fadeIn">
+        <div class="card map">
+          <div class="open-in-google-maps">
+            <button class="btn btn-medium btn-deep-blue btn-rounded">
+              Abrir no Google Maps
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-12 col-md-6 padding-six-lr padding-five-half-tb md-padding-ten-half-tb md-padding-twelve-half-lr sm-padding-15px-lr">
+        <div class="text-left text-white">
+          <div class="text-medium-gray alt-font text-small margin-5px-bottom sm-margin-three-bottom">
+            Contacte-nos
+          </div>
+          <h5 class="margin-55px-bottom text-white-2 alt-font font-weight-700 sm-margin-ten-bottom">
+            Entre em Contacto
+          </h5>
+
+          <form [formGroup]="contactUsForm">
+            <div class="row">
+              <div class="col-12">
+                <div id="message" class="mx-0"></div>
+              </div>
+              <div class="col-12 col-lg-12">
+                <input type="text" placeholder="Nome completo *" formControlName="name"
+                  [ngClass]="{ 'required-error': formValidator.isInvalid(name) }"
+                  class="bg-transparent border-color-medium-dark-gray medium-input">
+              </div>
+              <div class="col-12 col-lg-12">
+                <input type="text" placeholder="E-mail *" formControlName="email"
+                  [ngClass]="{ 'required-error': formValidator.isInvalid(email) }"
+                  class="bg-transparent border-color-medium-dark-gray medium-input">
+              </div>
+              <div class="col-12">
+                <textarea placeholder="Mensagem" rows="7" formControlName="message"
+                  [ngClass]="{ 'required-error': formValidator.isInvalid(message) }"
+                  class="bg-transparent border-color-medium-dark-gray medium-textarea"></textarea>
+              </div>
+              <div class="col-12 text-left">
+                <button [disabled]="!contactUsForm.valid" type="submit" class="btn btn-rounded btn-deep-blue btn-medium">
+                  Enviar agora <i class="ti-arrow-right font-weight-600"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="container margin-75px-top">
+            <div class="row">
+              <div class="col-auto">
+                <div class="group">
+                  <div class="box">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  Phone
+                </div>
+                <a class="h5 contact-link" href="tel:+244922679021">+244922679021</a>
+              </div>
+              <div class="col">
+                <div class="group">
+                  <div class="box">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  Email
+                </div>
+                <a class="h5 contact-link" href="mailto:studio@splashink.co">studio@splashink.co</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
