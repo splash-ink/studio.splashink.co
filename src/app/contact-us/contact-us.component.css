@@ -2,8 +2,10 @@
   --primary-color: #154EA0;
   --light-color: #FFFFFF;
   --light-gray-color: #C0C0C0;
+  --dark-gray-color: #3E3E3E;
   --box-color: #FFF;
   --input-color: #FFF;
+  --text-color: #FEFEFE;
 }
 
 input, textarea {
@@ -20,11 +22,38 @@ input, textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--box-color);
+  background-color: var(--primary-color);
   width: 25px;
   height: 25px;
   border-radius: 5px;
-  color: #000001;
+  color: var(--light-color);
+}
+
+.contact-link {
+  position: relative;
+  color: hsla(0, 0%, 100%, 1);
+}
+
+.contact-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--primary-color);
+  transform-origin: center right;
+  transform: scaleX(0) translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.contact-link:hover {
+  color: hsla(0, 0%, 100%, 0.8);
+}
+
+.contact-link:hover::before {
+  transform-origin: center left;
+  transform: scaleX(1) translateY(-50%);
 }
 
 .btn-deep-blue {
@@ -45,6 +74,12 @@ input, textarea {
 
 .card {
   border: none;
+}
+
+.card {
+  background-image: url('http://imageipsum.com/645x650');
+  background-repeat: no-repeat !important;
+  background-size: cover;
 }
 
 .open-in-google-maps {
