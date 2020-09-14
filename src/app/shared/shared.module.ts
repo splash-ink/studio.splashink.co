@@ -3,9 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MdToHtmlPipe } from './md-to-html.pipe';
 import { GalleryComponent } from './gallery/gallery.component';
+import { FormValidationService } from './services/form-validation.service';
 
 const utils = [
   MdToHtmlPipe
+];
+
+const svc = [
+  FormValidationService
 ];
 
 const comps = [
@@ -22,6 +27,9 @@ const shared = [
   ],
   exports: [
     ...shared
+  ],
+  providers: [
+    ...svc
   ],
   imports: [
     CommonModule,
