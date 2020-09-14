@@ -3,7 +3,10 @@
 </p>
 
 <p align="center">
-  <a aria-label="continuous integration" href="https://github.com/splash-ink/businx/issues">
+  <a aria-label="continuous integration" href="https://github.com/splash-ink/studio.splashink.co/actions?query=workflow%3A%22Firebase+Continuous+Deployment%22">
+    <img src="https://github.com/splash-ink/studio.splashink.co/workflows/Firebase%20Continuous%20Deployment/badge.svg" />
+  </a>
+  <a aria-label="continuous integration" href="https://github.com/splash-ink/studio.splashink.co/actions?query=workflow%3A%22Continuous+Integration%22">
     <img src="https://github.com/splash-ink/studio.splashink.co/workflows/Continuous%20Integration/badge.svg" />
   </a>
   <a aria-label="contributions welcome" href="https://github.com/splash-ink/businx/issues">
