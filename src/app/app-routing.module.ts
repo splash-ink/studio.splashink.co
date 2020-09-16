@@ -8,7 +8,7 @@ const routes: Routes = [
     loadChildren: () => import('@studio/blog').then(m => m.BlogModule)
   },
   {
-    path: 'gallery',
+    path: 'galleries',
     loadChildren: () => import('@studio/gallery').then(m => m.GalleryModule)
   },
   {
