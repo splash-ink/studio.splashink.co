@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { MdToHtmlPipe } from './md-to-html.pipe';
 import { GalleryComponent } from './gallery/gallery.component';
 import { FormValidationService } from './services/form-validation.service';
+import { TagsFilterComponent } from './tags-filter/tags-filter.component';
 
 const utils = [
   MdToHtmlPipe
@@ -14,7 +15,8 @@ const svc = [
 ];
 
 const comps = [
-  GalleryComponent
+  GalleryComponent,
+  TagsFilterComponent
 ];
 
 const shared = [
