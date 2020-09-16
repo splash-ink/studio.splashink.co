@@ -24,7 +24,7 @@ export class GalleryComponent implements OnInit {
       name: 'Afrikaneeze',
       description: 'Lorem ipsun, dolor sept unger ol demnget.',
       tags: ['photography', 'yearly-event'],
-      thumbnail: 'https://firebasestorage.googleapis.com/v0/b/disparos-digital-studio.appspot.com/o/Afrikaneeze%2Fafrikaneeze_medium_thumbnail.jpg?alt=media&token=de493ffd-99d9-4383-ab15-298aaecf7bd7',
+      thumbnail: 'https://i.postimg.cc/3WM9fXjD/afrikaneeze-medium-thumbnail.jpg',
       photos: []
     };
   }
