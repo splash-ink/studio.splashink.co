@@ -14,11 +14,12 @@ import { GalleryModel } from '@studio/gallery';
 })
 export class GalleryComponent implements OnInit {
 
-  @Input() data?: GalleryModel;
+  @Input('gallery') gallery?: GalleryModel;
+
   constructor() { }
 
   ngOnInit() {
-    this.data = this.data || {
+    this.gallery = this.gallery || {
       id: 'afrikaneeze-19',
       name: 'Afrikaneeze',
       description: 'Lorem ipsun, dolor sept unger ol demnget.',
