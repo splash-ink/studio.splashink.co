@@ -24,7 +24,7 @@ export class GalleryComponent implements OnInit {
       name: 'Afrikaneeze',
       description: 'Lorem ipsun, dolor sept unger ol demnget.',
       tags: ['photography', 'yearly-event'],
-      thumbnail: 'https://i.postimg.cc/3WM9fXjD/afrikaneeze-medium-thumbnail.jpg',
+      thumbnail: 'https://imageipsum.com/680x800',
       photos: []
     };
   }
