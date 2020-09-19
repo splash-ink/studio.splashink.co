@@ -1,1 +1,27 @@
-<p>galleries works!</p>
+<section class="wow fadeIn cover-background background-position-top top-space" id="galleries">
+  <div class="opacity-medium bg-extra-dark-gray"></div>
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-12 d-flex flex-column text-center justify-content-center page-title-large padding-30px-tb">
+              <h1 class="alt-font text-white font-weight-600 mb-0">Nós Fazemos as Coisas Diferentes 💙</h1>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="p-0 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+  <ds-tags-filter></ds-tags-filter>
+
+  <div class="container-fluid">
+    <div class="row blog-post-style4">
+      <div class="col-12 px-3 p-md-0">
+        <div class="filter-content overflow-hidden">
+        <ul class="galleries blog-grid blog-4col gutter-small" style="position: relative; min-height: 450px;">
+            <li class="grid-sizer"></li>
+            <ds-gallery *ngFor="let gallery of [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"></ds-gallery>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
