@@ -77,7 +77,7 @@ input, textarea {
 }
 
 .card {
-  background-image: url('http://imageipsum.com/645x650');
+  background-image: url('https://imageipsum.com/645x650');
   background-repeat: no-repeat !important;
   background-size: cover;
 }
