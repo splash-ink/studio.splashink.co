@@ -5,7 +5,7 @@
         class="blog-filter nav nav-tabs justify-content-center border-0 portfolio-filter-tab-1 font-weight-600 alt-font text-uppercase text-center margin-30px-tb text-small md-margin-40px-bottom sm-margin-20px-bottom">
         <li class="nav filter-text"
             *ngFor="let filter of ['Manipulação de Imagem', 'Produto', 'Marca', 'Ilustração']">
-          <a [routerLink]="['galleries/tags', filter]" class="light-gray-text-link text-very-small filter-text">
+          <a [routerLink]="['/galleries']" [queryParams]="{ tag: filter }" queryParamsHandling="merge" class="light-gray-text-link text-very-small filter-text">
             {{ filter }}
           </a>
         </li>
