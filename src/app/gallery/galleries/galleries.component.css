@@ -1,0 +1,5 @@
+section#galleries {
+  background: url('https://imageipsum.com/1350x350');
+  background-size: cover;
+  background-repeat: no-repeat !important;
+}

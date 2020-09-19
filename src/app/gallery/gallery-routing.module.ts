@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { GalleriesComponent } from './galleries/galleries.component';
 import { GalleryComponent } from './gallery.component';
 
 const routes: Routes = [
@@ -10,7 +11,7 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/'
+    component: GalleriesComponent
   }
 ];
 
