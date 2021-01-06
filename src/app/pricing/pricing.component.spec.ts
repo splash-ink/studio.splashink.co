@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PricingComponent } from './pricing.component';
 import { AccordionComponent } from './accordion/accordion.component';
@@ -8,7 +8,7 @@ describe('⚡ Pricing Page', () => {
   let component: PricingComponent;
   let fixture: ComponentFixture<PricingComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         PricingComponent,

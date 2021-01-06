@@ -45,6 +45,11 @@
               "src/assets/lib/revolution/js/jquery.themepunch.tools.min.js",
               "src/assets/lib/revolution/js/jquery.themepunch.revolution.min.js",
               "node_modules/magnific-popup/dist/jquery.magnific-popup.min.js"
+            ],
+            "allowedCommonJsDependencies": [
+              "jquery",
+              "magnific-popup",
+              "axios"
             ]
           },
           "configurations": {
@@ -58,7 +63,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
