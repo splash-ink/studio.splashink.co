@@ -1,5 +1,5 @@
 import { By } from '@angular/platform-browser';
-import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
 import { OnboardComponent } from './onboard.component';
 import { BannerComponent } from './banner/banner.component';
 import { PartnerComponent } from './partner/partner.component';
@@ -8,7 +8,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 describe('⚡ Onboard Page', () => {
     let fixture: ComponentFixture<OnboardComponent>;
 
-    beforeEach(async(() => {
+    beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
             declarations: [
               OnboardComponent,
