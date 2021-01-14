@@ -6,6 +6,7 @@ import { CoreModule } from '@studio/core';
 import { QuicklinkModule } from 'ngx-quicklink';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 registerLocaleData(ptAO);
 
@@ -16,6 +17,7 @@ registerLocaleData(ptAO);
     AppRoutingModule,
     QuicklinkModule,
     CoreModule,
+    ScullyLibModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt-AO' }
