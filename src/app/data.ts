@@ -12,8 +12,8 @@ export const PICTURES: ImageModel [] = [
 export const PRICINGS: PriceModel [] = [
     {
         highlighted: false,
-        name: 'Clássico',
-        price: 50,
+        name: 'Individual',
+        price: 2500,
         coin: null,
         benefits: [
             '30% off discount astrwo',
@@ -23,8 +23,8 @@ export const PRICINGS: PriceModel [] = [
     },
     {
         highlighted: false,
-        name: 'Profissional',
-        price: 50,
+        name: 'Casal',
+        price: 3000,
         coin: null,
         benefits: [
             '30% off discount astrwo',
@@ -34,8 +34,8 @@ export const PRICINGS: PriceModel [] = [
     },
     {
         highlighted: true,
-        name: 'Premium',
-        price: 50,
+        name: 'Grupo',
+        price: 3500,
         coin: null,
         benefits: [
             '30% off discount astrwo',
@@ -45,12 +45,15 @@ export const PRICINGS: PriceModel [] = [
     },
     {
         highlighted: false,
-        name: 'Golden Boy ⭐',
-        price: 50,
+        name: 'Estrela',
+        price: 5000,
         coin: null,
         benefits: [
-            '30% off discount astrwo',
-            'Lorem ipsun shetug kunai dolet imir'
+            'Captura até 3000 pixels (HD)',
+            'Fotografia em fundo colorido',
+            'Remoção de Imperfeições',
+            'Correção de Cores',
+            'Estilização de Fotografia'
         ],
         coupon: null
     }
@@ -58,30 +61,30 @@ export const PRICINGS: PriceModel [] = [
 
 export const BACKERS: PartnerModel [] = [
     {
-        alt: 'Envato',
-        logo_url: 'https://www.themezaa.com/html/pofo/images/logo-18.png',
-        thumbnail_url: 'https://www.themezaa.com/html/pofo/images/clients-img1.jpg',
+        alt: 'FF Selection',
+        logo_url: 'assets/images/our-partners/ff-logo.png',
+        thumbnail_url: 'assets/images/our-partners/1.png',
+        description: 'Envato Ipsum is simply dummy text of the printing and typesetting industry.\
+         Lorem Ipsum has been the industry\'s standard dummy text ever since.'
+    },
+    {
+        alt: 'Organizacões Chana',
+        logo_url: 'assets/images/our-partners/chana-logo.png',
+        thumbnail_url: 'assets/images/our-partners/2.png',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.\
          Lorem Ipsum has been the industry\'s standard dummy text ever since.'
     },
     {
-        alt: 'Magento',
-        logo_url: 'https://www.themezaa.com/html/pofo/images/logo-19.png',
-        thumbnail_url: 'https://www.themezaa.com/html/pofo/images/clients-img2.jpg',
+        alt: 'Docegulla',
+        logo_url: 'assets/images/our-partners/docegulla-logo.png',
+        thumbnail_url: 'assets/images/our-partners/3.png',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.\
          Lorem Ipsum has been the industry\'s standard dummy text ever since.'
     },
     {
-        alt: 'Google',
-        logo_url: 'https://www.themezaa.com/html/pofo/images/logo-20.png',
-        thumbnail_url: 'https://www.themezaa.com/html/pofo/images/clients-img3.jpg',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.\
-         Lorem Ipsum has been the industry\'s standard dummy text ever since.'
-    },
-    {
-        alt: 'Spotify',
-        logo_url: 'https://www.themezaa.com/html/pofo/images/logo-21.png',
-        thumbnail_url: 'https://www.themezaa.com/html/pofo/images/clients-img4.jpg',
+        alt: 'Volvo - Auto Sueco',
+        logo_url: 'assets/images/our-partners/volvo-logo.png',
+        thumbnail_url: 'assets/images/our-partners/4.png',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.\
          Lorem Ipsum has been the industry\'s standard dummy text ever since.'
     }
