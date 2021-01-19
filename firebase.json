@@ -1,7 +1,7 @@
 {
   "hosting": {
     "target": "studio-splashink",
-    "public": "dist",
+    "public": "dist/static",
     "ignore": [
       "firebase.json",
       "**/.*",
