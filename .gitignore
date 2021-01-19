@@ -36,6 +36,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+*.log
 
 # System Files
 .DS_Store
@@ -43,3 +44,6 @@ Thumbs.db
 
 # ENV files
 src/environments/contentful.environment.ts
+
+# Scully
+.scully

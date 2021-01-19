@@ -16,9 +16,8 @@ export class PricingComponent implements OnInit {
 
   ngOnInit() {
     this.seoService.generateTags({
-      title: 'Preçários - Q&A',
-      description: 'Ajustamos tudo para que minimize seus custos com preços bem definidos e aproveite dos nossos serviços.',
-      image: 'https://domain-to-picture.com',
+      title: 'Preçários',
+      description: 'Preços simples e previsíveis em todos os pacotes fotográficos. Veja a nossa tabela comparativa para fotografia em grupo, individual, artística e muito mais.',
       slug: 'pricing'
     });
 

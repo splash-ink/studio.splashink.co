@@ -4,17 +4,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css');
 
-@import url('assets/css/bootstrap.min.css');
-@import url('assets/css/bootsnav.css');
-@import url('assets/css/animate.css');
-@import url('assets/css/magnific-popup.css');
-@import url('assets/css/et-line-icons.css');
-@import url('assets/css/swiper.min.css');
-@import url('assets/css/justified-gallery.min.css');
-/* @import url('assets/lib/revolution/css/layers.css');
-@import url('assets/lib/revolution/css/navigation.css');
-@import url('assets/lib/revolution/css/settings.css'); */
-
 body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;

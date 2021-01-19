@@ -24,8 +24,8 @@ export class ContactUsComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoServicce.generateTags({
-      title: `Contacte-nos - Splash Ink Studios`,
-        description: 'Entre em contacto com o Estúdio Digital para saber mais sobre os nossos Serviços.',
+      title: `Contacte-nos`,
+        description: 'Tem uma questão? Contacte-nos por email ou solicite uma visita guiada aos nossos serviços por telefone.',
         slug: `contact-us`
     });
 

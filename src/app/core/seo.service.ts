@@ -37,9 +37,9 @@ export class SeoService implements OnDestroy {
 
   generateTags(config) {
     config = {
-      title: 'Splash Ink :: Estúdio Digital',
-      description: 'Put your site description here.',
-      image: 'https://domain-to-picture.com',
+      title: 'Estúdio Digital',
+      description: 'Descubra a nossa enorme coleção exclusiva de fotografias, momentos incríveis em estúdio, fotos ao ar livre, fotografias criativas e cobertura de eventos especiais. Solicite um orçamento gratuito agora.',
+      image: 'https://studio.splashink.co/assets/public/preview.webp',
       slug: '',
       ...config
     };
@@ -52,8 +52,8 @@ export class SeoService implements OnDestroy {
     this.meta.updateTag({ name: 'twitter:description', content: config.description });
     this.meta.updateTag({ name: 'twitter:image', content: config.image });
 
-    this.meta.updateTag({ property: 'og:type', content: 'article' });
-    this.meta.updateTag({ property: 'og:site_name', content: 'splashink' });
+    this.meta.updateTag({ property: 'og:type', content: 'website' });
+    this.meta.updateTag({ property: 'og:site_name', content: 'Splash Ink' });
     this.meta.updateTag({ property: 'og:title', content: config.title });
     this.meta.updateTag({ property: 'og:description', content: config.description });
     this.meta.updateTag({ property: 'og:image', content: config.image });
