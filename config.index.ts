@@ -9,7 +9,7 @@ const envConfigFile = `export const environment = {
   }
 };`;
 
-console.log(`A ${process.env.CONTENTFUL_SPACE_ID} | A1: ${process.env.CONTENTFUL_ACCESS_TOKEN}`);
+console.log(`A ${secrets?.CONTENTFUL_SPACE_ID} | A1: ${secrets?.CONTENTFUL_ACCESS_TOKEN}`);
 
 writeFile(targetPath, envConfigFile, 'utf8', (error) => {
   if (error) {
